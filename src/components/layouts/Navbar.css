@@ -1,0 +1,25 @@
+.Navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+.Navbar__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.Navbar__profile-photo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.Navbar__profile-photo__img {
+  height: 80%;
+  border-radius: 100%;
+  cursor: pointer;
+}
