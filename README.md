@@ -35,6 +35,14 @@ npm run start
 
 ## Contribution Conventions
 
+Here's an example commit flow with git:
+
+```bash
+git add .
+git commit -m "category: do something"
+git push origin main
+```
+
 The syntax for making `git commit -m <insert_message_here>` messages should follow this syntax for consistency:
 
 ```bash
