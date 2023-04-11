@@ -1,0 +1,16 @@
+.ghostButton {
+    padding: .8rem;
+    width: 5rem;
+    border-radius: 8px;
+    background-color: white;
+    color: rgb(1, 58, 164);
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(1, 58, 164);
+}
+
+.ghostButton:hover {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}
