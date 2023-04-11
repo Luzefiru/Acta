@@ -2,8 +2,6 @@
 
 A full stack single-page blog application with CRUD capabilities & user authentication.
 
-# Contributing
-
 ## Setup
 
 Run this command to clone the repository into the current directory and `git pull` the newest version to make sure:
@@ -85,3 +83,9 @@ blog-project/
    - `components/layouts` - header, footer, navbar, sidebars, etc.
    - `components/ui` - commonly used UI elements like buttons, lists, links, etc.
 3. `pages` - contains folders corresponding to the main pages which serve as `Route`s with React Router
+
+# Wireframe Design
+
+<img src="./docs/early-wireframe.png" alt="Early Wireframe Design">
+
+# Contributing
