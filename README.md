@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# blog-project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full stack single-page blog application with CRUD capabilities & user authentication.
 
-## Available Scripts
+# Contributing
 
-In the project directory, you can run:
+## Setup
 
-### `npm start`
+Run this command to clone the repository into the current directory and `git pull` the newest version to make sure:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+# clones the remote repo into your machine
+git clone git@github.com:Luzefiru/blog-project.git
+# gets the newest version of the remote repo
+git pull
+# open the project directory in your text editor of choice
+code ./blog-project
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once that's done, you'll have to install the `node_modules` dependencies via this command:
 
-### `npm test`
+```bash
+# install dependencies according to package-lock.json
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Running
 
-### `npm run build`
+To host the project on your local machine with live server & webpack's `--watch` option to detect new changes automatically, do:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# runs the package.json "start" script
+npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contribution Conventions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The syntax for making `git commit -m <insert_message_here>` messages should follow this syntax for consistency:
 
-### `npm run eject`
+```bash
+"category: do something"
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. `do something` must be written in [imperative tone](https://www.theserverside.com/video/Follow-these-git-commit-message-guidelines#:~:text=If%20you%20want%20to%20write,Instead%2C%20describe%20what%20was%20done.).
+2. `category` must fall under these categories;
+   - `feat:` introduces a new feature or component to the codebase
+   - `style:` changes a layout, stylesheet, UI look of a certain component
+   - `fix:` patches a bug
+   - `docs:` any addition pertaining to documentation (comments, README.md, etc)
+   - `nit:` small change based on some sort of convention, see [this SO question](https://stackoverflow.com/questions/27810522/what-does-nit-mean-in-hacker-speak).
+   - `BREAKING CHANGE:` a change that dramatically changes a pre-existing system - possibly leading to bugs to be patched
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+blog-project/
+├─ node_modules/
+├─ public/
+│  ├─ index.html
+├─ src/
+│  ├─ assets/
+│  ├─ components/
+├─ ├─ ├─ layouts/
+├─ ├─ ├─ ui/
+├─ ├─ pages/
+│  ├─ App.jsx
+│  ├─ App.css
+│  ├─ index.css
+│  ├─ index.js
+├─ package.json
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## The `src/` Directories
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. `assets` - contains images, graphics, font families, etc. that will be imported into `/src`'s files.
+2. `components` - contains commonly reused components.
+   - `components/layouts` - header, footer, navbar, sidebars, etc.
+   - `components/ui` - commonly used UI elements like buttons, lists, links, etc.
+3. `pages` - contains folders corresponding to the main pages which serve as `Route`s with React Router
