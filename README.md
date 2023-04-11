@@ -2,6 +2,8 @@
 
 A full stack single-page blog application with CRUD capabilities & user authentication.
 
+# Contributing
+
 ## Setup
 
 Run this command to clone the repository into the current directory and `git pull` the newest version to make sure:
@@ -87,5 +89,3 @@ blog-project/
 # Wireframe Design
 
 <img src="./docs/early-wireframe.png" alt="Early Wireframe Design">
-
-# Contributing
