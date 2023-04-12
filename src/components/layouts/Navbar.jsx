@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <Link to="/" style={{ textDecoration: 'none' }}>
-        <Logo />
+        <Logo color="var(--black)" />
       </Link>
 
       <nav className="Navbar__links">
