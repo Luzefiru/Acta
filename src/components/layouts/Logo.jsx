@@ -2,7 +2,7 @@ import './Logo.css';
 import { useState } from 'react';
 
 const Logo = (props) => {
-  // we can set thed default & hoverColor
+  // we can set the default color & hoverColor
   // isWordmark determines whether the "Acta" word is rendered
   // we can also set the width & fontSize
   const {
