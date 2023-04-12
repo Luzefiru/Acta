@@ -1,7 +1,7 @@
-import "./ContainedButton.css"
+import "./ContainedButton.css";
 
-function ContainedButton() {
-    return <div className="containedButton">Edit</div>;
+function ContainedButton(props) {
+  return <div className="containedButton">Edit</div>;
 }
 
 export default ContainedButton;
