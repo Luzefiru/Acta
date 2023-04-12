@@ -10,7 +10,13 @@
 
 .Navbar__links {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 24px;
+}
+
+.Navbar__links__new-post-icon,
+.Navbar__links__feed-icon {
+  color: var(--black);
 }
 
 .Navbar__profile-photo {
@@ -24,4 +30,34 @@
   height: 40px;
   border-radius: 100%;
   cursor: pointer;
+}
+
+nav a {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--icon);
+  cursor: pointer;
+}
+
+nav a:hover {
+  color: var(--icon-hover);
+}
+
+.Navbar__links__button {
+  all: unset;
+  background-color: var(--primary);
+  padding: 6px 16px;
+  border-radius: 16px;
+  color: var(--surface);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  gap: 6px;
+}
+
+.Navbar__links__button:hover {
+  background-color: var(--primary-alt);
 }
