@@ -5,6 +5,7 @@
   justify-content: space-between;
   padding: 0 3rem;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  background-color: var(--white);
 }
 
 .Navbar__links {

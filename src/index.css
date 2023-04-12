@@ -20,6 +20,10 @@
   --positive: #00c853;
 }
 
+body {
+  background-color: var(--surface);
+}
+
 /* Font stacks */
 
 body {
