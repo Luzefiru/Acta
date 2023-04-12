@@ -1,7 +1,7 @@
-import "./GhostButton.css"
+import "./GhostButton.css";
 
 function GhostButton() {
-    return <div className="ghostButton">Edit</div>;
+  return <div className="ghostButton">Edit</div>;
 }
 
 export default GhostButton;

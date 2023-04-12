@@ -2,15 +2,15 @@
     padding: .8rem;
     width: 5rem;
     border-radius: 8px;
-    background-color: rgb(25, 56, 232);
+    background-color: var(--primary);
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgb(1, 58, 164);
+    border: 2px solid var(--primary-alt);
 }
 
 .containedButton:hover {
     cursor: pointer;
-    background-color: rgb(16, 46, 216);
+    background-color: var(--primary-alt);
 }

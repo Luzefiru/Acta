@@ -3,11 +3,11 @@
     width: 5rem;
     border-radius: 8px;
     background-color: white;
-    color: rgb(1, 58, 164);
+    color: var(--primary);
     font-size: 1.2rem;
     font-weight: bold;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    border: 2px solid rgb(1, 58, 164);
+    border: 2px solid var(--primary-alt);
 }
 
 .ghostButton:hover {
