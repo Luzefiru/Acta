@@ -1,18 +1,39 @@
 import './Logo.css';
+import { useState } from 'react';
 
 const Logo = (props) => {
+  // we can set thed default & hoverColor
+  // isWordmark determines whether the "Acta" word is rendered
+  // we can also set the width & fontSize
   const {
-    color,
+    color = '(--black)',
+    hoverColor = '(--black)',
     isWordmark = true,
     width = '40px',
     fontSize = '1.7rem',
   } = props;
 
+  const [currentColor, setCurrentColor] = useState(color);
+
   return (
-    <div className="Logo">
+    <div
+      className="Logo"
+      onMouseEnter={() => {
+        console.log('true');
+        setCurrentColor(hoverColor);
+      }}
+      onMouseLeave={() => {
+        console.log('false');
+        setCurrentColor(color);
+      }}
+    >
       <svg
         className="Logo__img"
-        style={{ width: width, height: width, color: color }}
+        style={{
+          width: width,
+          height: width,
+          color: currentColor,
+        }}
         data-v-423bf9ae=""
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 90"
@@ -37,7 +58,7 @@ const Logo = (props) => {
       {isWordmark ? (
         <span
           className="Logo__wordmark"
-          style={{ fontSize: fontSize, color: color }}
+          style={{ fontSize: fontSize, color: currentColor }}
         >
           Acta
         </span>
