@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 3rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .Navbar__links {
@@ -15,11 +15,12 @@
 .Navbar__profile-photo {
   display: flex;
   align-items: center;
-  height: 100%;
+  height: fit-content;
 }
 
 .Navbar__profile-photo__img {
-  height: 80%;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
   cursor: pointer;
 }

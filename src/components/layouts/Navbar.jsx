@@ -1,12 +1,13 @@
 import './Navbar.css';
 import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
+import Logo from './Logo';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <div className="Navbar">
       <Link to="/">
-        <h1 className="Navbar__logo">My Blog</h1>
+        <Logo />
       </Link>
 
       <nav className="Navbar__links">
