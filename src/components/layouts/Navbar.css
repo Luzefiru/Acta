@@ -12,24 +12,7 @@
   display: flex;
   align-items: center;
   gap: 24px;
-}
-
-.Navbar__links__new-post-icon,
-.Navbar__links__feed-icon {
-  color: var(--black);
-}
-
-.Navbar__profile-photo {
-  display: flex;
-  align-items: center;
-  height: fit-content;
-}
-
-.Navbar__profile-photo__img {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  cursor: pointer;
+  height: 100%;
 }
 
 nav a {
@@ -60,4 +43,25 @@ nav a:hover {
 
 .Navbar__links__button:hover {
   background-color: var(--primary-alt);
+}
+
+.Navbar__links__new-post-icon,
+.Navbar__links__feed-icon {
+  color: var(--black);
+}
+
+.Navbar__profile-photo {
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  height: 100%;
+  position: relative;
+}
+
+.Navbar__profile-photo__img {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  cursor: pointer;
+  position: relative;
 }
