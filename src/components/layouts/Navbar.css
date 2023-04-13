@@ -101,7 +101,7 @@ nav a:hover {
   }
 
   .Navbar__links,
-  .Navbar__links__button,
+  a[href='/create-post'],
   a[href='/feed'] {
     display: none;
   }
@@ -113,7 +113,7 @@ nav a:hover {
 
   .Navbar.expanded > nav.Navbar__links {
     height: 100%;
-    width: max(40%, 256px);
+    width: max(50%, 256px);
     display: grid;
     padding: 5% 5%;
     justify-content: center;

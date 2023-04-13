@@ -64,7 +64,7 @@ const Navbar = () => {
               height="20"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke="var(--surface)"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -101,7 +101,7 @@ const Navbar = () => {
             src={ProfilePicturePlaceholder}
           ></img>
           <span className="Navbar__profile-photo__userName">
-            <div>Christian Antonio IV L. de Jesus</div>
+            <div>John Doe</div>
             <div className="Navbar__profile-photo__userName__viewProfile">
               View Profile
             </div>
