@@ -31,3 +31,11 @@ h3 {
 a, p {
     color: var(--subtext);
 }
+
+.Logo > svg {
+  transition: transform .8s ease-in-out;
+}
+
+.Logo > svg:hover {
+  transform: rotate(360deg);
+}
