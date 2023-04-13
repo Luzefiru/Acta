@@ -47,7 +47,15 @@ function Post(props) {
         <div className="Post__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
           quidem praesentium deleniti illum totam omnis expedita explicabo
-          dolores.
+          dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Aperiam quidem praesentium deleniti illum totam omnis expedita
+          explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Aperiam quidem praesentium deleniti illum totam omnis expedita
+          explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Aperiam quidem praesentium deleniti illum totam omnis expedita
+          explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Aperiam quidem praesentium deleniti illum totam omnis expedita
+          explicabo dolores.
         </div>
       </div>
     </div>

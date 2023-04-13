@@ -30,8 +30,9 @@
 }
 
 .Post__AuthorCard--link {
-  grid-area: author;
   all: unset;
+  align-self: end;
+  grid-area: author;
   display: flex;
   justify-content: flex-end;
 }
@@ -39,6 +40,7 @@
 .Post__description {
   grid-area: description;
   align-self: start;
+  line-height: 1.4;
 }
 
 @media only screen and (min-width: 768px) {
@@ -63,5 +65,13 @@
     display: grid;
     justify-items: start;
     line-height: 2.5ch;
+  }
+
+  .Post__description {
+    padding: 0 32px;
+  }
+
+  .Post__title {
+    text-align: center;
   }
 }
