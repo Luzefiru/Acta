@@ -19,6 +19,7 @@
 
 .Post__date {
   grid-area: date;
+  align-self: start;
   display: grid;
   justify-items: end;
   line-height: 3ch;
@@ -37,6 +38,7 @@
 
 .Post__description {
   grid-area: description;
+  align-self: start;
 }
 
 @media only screen and (min-width: 768px) {
