@@ -43,6 +43,17 @@
   line-height: 1.4;
 }
 
+img.Post__cover {
+  justify-self: center;
+  margin-top: calc(
+    (24px + 32px) / 2
+  ); /* Post--header row-gap + App vertical padding / 2 */
+  width: calc(100% - 8px);
+  height: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 @media only screen and (min-width: 768px) {
   .Post__title {
     font-size: 2.5rem;

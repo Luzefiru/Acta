@@ -2,6 +2,7 @@ import './Post.css';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
+import CoverImagePlaceholder from '../../assets/placeholder-cover.jpg';
 import AuthorCard from './AuthorCard';
 
 function Post(props) {
@@ -14,6 +15,7 @@ function Post(props) {
     postID: postID, // the fetchedData's postID should be based on the URL
     authorUID: '87cxzids989a',
     datePosted: 1681354006526,
+    coverImageURL: CoverImagePlaceholder,
     title: 'Functional Versus Object-Oriented Programming',
     body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem praesentium deleniti illum totam omnis expedita explicabo dolores. Quidem, minus accusamus earum temporibus laudantium dolorum, iusto quas voluptas neque facere id tempora possimus ea harum rerum dolor culpa inventore, est repellendus voluptatibus similique iure. Rerum odio beatae nulla assumenda consequatur!',
     tags: ['Programming', 'Computer Science', 'Technology'],
@@ -58,6 +60,11 @@ function Post(props) {
           explicabo dolores.
         </div>
       </div>
+      <img
+        className="Post__cover"
+        src={fetchedData.coverImageURL}
+        alt="Cover"
+      ></img>
     </div>
   );
 }
