@@ -128,7 +128,7 @@ nav a:hover {
   }
 
   .Navbar.expanded > *:not(.Navbar__links),
-  .App.blur > *:not(.Navbar) {
+  .App.blur > .App--wrapper *:not(.Navbar) {
     filter: blur(4px);
   }
 
@@ -150,7 +150,7 @@ nav a:hover {
   }
 
   .Navbar.expanded > nav.Navbar__links {
-    height: 100%;
+    height: 100vh;
     width: max(50%, 256px);
     display: grid;
     padding: 5% 5%;
@@ -163,7 +163,7 @@ nav a:hover {
     position: absolute;
     top: 0px;
     right: 0px;
-    z-index: 99999;
+    z-index: 999;
   }
 
   .Navbar.expanded .Navbar__profile-photo {

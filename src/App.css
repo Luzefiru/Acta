@@ -1,6 +1,12 @@
+.App {
+  position: relative;
+}
+
 .App--wrapper {
   padding: 32px 24px; /* based on Medium.com's padding */
   padding-top: calc(32px + 64px); /* + Navbar height */
+  position: relative;
+  z-index: -1;
 }
 
 @media only screen and (min-width: 768px) {
