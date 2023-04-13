@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 4vw;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   background-color: var(--white);
 }
@@ -11,7 +11,7 @@
 .Navbar__links {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 1.5vw;
   height: 100%;
 }
 
@@ -22,6 +22,7 @@ nav a {
   gap: 8px;
   color: var(--icon);
   cursor: pointer;
+  justify-content: center;
 }
 
 nav a:hover {
@@ -31,8 +32,8 @@ nav a:hover {
 .Navbar__links__button {
   all: unset;
   background-color: var(--primary);
-  padding: 6px 16px;
-  border-radius: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
   color: var(--surface);
   display: flex;
   align-items: center;
@@ -43,11 +44,6 @@ nav a:hover {
 
 .Navbar__links__button:hover {
   background-color: var(--primary-alt);
-}
-
-.Navbar__links__new-post-icon,
-.Navbar__links__feed-icon {
-  color: var(--black);
 }
 
 .Navbar__profile-photo {
@@ -64,4 +60,126 @@ nav a:hover {
   border-radius: 100%;
   cursor: pointer;
   position: relative;
+}
+
+.Navbar__profile-photo__userName {
+  display: none;
+  font-weight: 600;
+}
+
+.Navbar__profile-photo__userName__viewProfile {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--subtext);
+}
+
+.Navbar__nav-expand-button {
+  all: unset;
+  display: none;
+  cursor: pointer;
+  color: var(--icon);
+}
+
+.expandedNavItems {
+  display: none;
+  height: 100%;
+}
+.Navbar__nav-expand-button:hover {
+  color: var(--icon-hover);
+}
+
+.expandedNavItems__menu-title {
+  text-transform: uppercase;
+  color: var(--subtext);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  align-self: start;
+  margin-top: 2rem;
+}
+
+.expandedNavItems > a {
+  display: flex;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.Link--logout,
+.Link--logout:hover {
+  margin-top: auto;
+  color: var(--destructive);
+}
+
+@media only screen and (max-width: 768px) {
+  .expandedNavItems {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-self: baseline;
+  }
+
+  nav.expanded header > *:not(.Navbar__links),
+  nav.expanded .App > *:not(.Navbar) {
+    transition: filter 88ms ease-in;
+  }
+
+  .Navbar.expanded > *:not(.Navbar__links),
+  .App.blur > *:not(.Navbar) {
+    filter: blur(4px);
+  }
+
+  .Navbar__links,
+  .Navbar__links > a[href='/feed'] {
+    display: none;
+  }
+
+  .Navbar__links__button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .Navbar__nav-expand-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .Navbar.expanded > nav.Navbar__links {
+    height: 100%;
+    width: max(50%, 256px);
+    display: grid;
+    padding: 5% 5%;
+    justify-content: center;
+    grid-template-rows: 88px 1px 1fr;
+    grid-template-columns: 100%;
+    gap: 24px;
+    background-color: var(--surface);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 99999;
+  }
+
+  .Navbar.expanded .Navbar__profile-photo {
+    display: flex;
+    gap: 16px;
+    order: -1;
+    justify-self: center;
+  }
+
+  .Navbar.expanded .Navbar__profile-photo__img {
+    width: 88px;
+    height: 88px;
+  }
+
+  .Navbar.expanded .Navbar__profile-photo__userName {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    text-align: left;
+  }
 }

@@ -6,9 +6,8 @@ function Home() {
   return (
     <div className="Home">
       I'm in Home!
-      <ContainedButton />
-      <GhostButton />
-      <Footer />
+      <ContainedButton content="Edit" />
+      <GhostButton content="Edit" />
     </div>
   );
 }
