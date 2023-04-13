@@ -1,0 +1,33 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: black;
+  padding: 6rem 6rem 2rem 6rem;
+}
+
+.product,
+.resources,
+.company {
+  display: flex;
+  flex-direction: column;
+  line-height: 32px;
+}
+
+.footer-content {
+  display: flex;
+  align-items:flex-start;
+  justify-content: space-around;
+  width: 100%;
+}
+
+h3 {
+  color: var(--surface-alt);
+}
+
+a, p {
+    color: var(--subtext);
+}
