@@ -12,5 +12,5 @@
 
 .ghostButton:hover {
     cursor: pointer;
-    background-color: rgb(235, 235, 235);
+    background-color: var(--surface-alt);
 }
