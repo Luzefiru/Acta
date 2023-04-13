@@ -2,13 +2,55 @@ import './Navbar.css';
 import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Navbar = () => {
+  const expandNavbar = () => {
+    console.log('hi');
+    document.querySelector('.Navbar').classList.toggle('expanded');
+    document.querySelector('.App').classList.toggle('blur');
+  };
+
+  useEffect(() => {
+    window.addEventListener('click', (e) => {
+      const navMenu = document.querySelector('.Navbar__links');
+      const expandButton = document.querySelector('.Navbar__nav-expand-button');
+      const navSvg = document.querySelectorAll('.Navbar svg');
+      const navLine = document.querySelectorAll('.Navbar line');
+
+      if (
+        [navMenu, expandButton, ...navSvg, ...navLine].indexOf(e.target) === -1
+      ) {
+        document.querySelector('.Navbar').classList.remove('expanded');
+        document.querySelector('.App').classList.remove('blur');
+      }
+    });
+  }, []);
+
   return (
-    <div className="Navbar">
+    <header className="Navbar">
       <Link to="/" style={{ textDecoration: 'none' }}>
         <Logo color="var(--icon)" hoverColor="var(--icon-hover)" />
       </Link>
+
+      <button className="Navbar__nav-expand-button" onClick={expandNavbar}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu"
+        >
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
 
       <nav className="Navbar__links">
         <Link to="/create-post">
@@ -58,9 +100,15 @@ const Navbar = () => {
             alt="User Profile"
             src={ProfilePicturePlaceholder}
           ></img>
+          <span className="Navbar__profile-photo__userName">
+            <div>Christian Antonio IV L. de Jesus</div>
+            <div className="Navbar__profile-photo__userName__viewProfile">
+              View Profile
+            </div>
+          </span>
         </Link>
       </nav>
-    </div>
+    </header>
   );
 };
 
