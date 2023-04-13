@@ -6,6 +6,8 @@
   padding: 0 4vw;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   background-color: var(--white);
+  position: fixed;
+  width: 100%;
 }
 
 .Navbar__links {
