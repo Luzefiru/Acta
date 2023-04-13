@@ -1,5 +1,6 @@
 .Post {
-  display: grid;
+  display: flex;
+  flex-direction: column;
 }
 
 .Post--header {
@@ -49,7 +50,7 @@ img.Post__cover {
     (24px + 32px) / 2
   ); /* Post--header row-gap + App vertical padding / 2 */
   width: calc(100% - 8px);
-  height: 50%;
+  height: 30vw;
   object-fit: cover;
   border-radius: 8px;
 }
