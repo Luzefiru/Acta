@@ -19,8 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/create-post" element={<CreatePost />} />
-          <Route path="/post/:id" element={<Post />} />
-          <Route path="/profile/:uid" element={<Profile />} />
+          <Route path="/post/:postID" element={<Post />} />
+          <Route path="/profile/:userID" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </div>
