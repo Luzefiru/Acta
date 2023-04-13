@@ -1,6 +1,6 @@
 # Utility Modules
 
-> All the code we actually use in production are found in `/src/utils/, meanwhile, the test runner `.test.js`files are located in`/src/utils/test/`.
+> All the code we actually use in production are found in `/src/utils/`, meanwhile, the test runner `.test.js`files are located in`/src/utils/test/`.
 
 ## List of Modules
 
