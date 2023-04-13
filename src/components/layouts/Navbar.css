@@ -100,7 +100,9 @@ nav a:hover {
     filter: blur(4px);
   }
 
-  .Navbar__links {
+  .Navbar__links,
+  .Navbar__links__button,
+  a[href='/feed'] {
     display: none;
   }
 

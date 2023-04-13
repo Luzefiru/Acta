@@ -28,7 +28,7 @@ const Logo = (props) => {
       }}
     >
       <svg
-        className="Logo__img"
+        className="Logo__img iconLeft"
         style={{
           width: width,
           height: width,
@@ -37,7 +37,6 @@ const Logo = (props) => {
         data-v-423bf9ae=""
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 90"
-        class="iconLeft"
       >
         <g
           data-v-423bf9ae=""
