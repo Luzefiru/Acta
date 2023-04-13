@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 /* JSX component imports */
 import Navbar from './components/layouts/Navbar.jsx';
+import Footer from './components/layouts/Footer.jsx';
 import Home from './pages/Home/Home.jsx';
 import Feed from './pages/Feed/Feed.jsx';
 import CreatePost from './pages/CreatePost/CreatePost.jsx';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/profile/:userID" element={<Profile />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </div>
   );

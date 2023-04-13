@@ -1,6 +1,5 @@
-import ContainedButton from "../../components/ui/ContainedButton.jsx";
-import GhostButton from "../../components/ui/GhostButton.jsx";
-import Footer from "../../components/layouts/Footer.jsx";
+import ContainedButton from '../../components/ui/ContainedButton.jsx';
+import GhostButton from '../../components/ui/GhostButton.jsx';
 
 function Home() {
   return (
