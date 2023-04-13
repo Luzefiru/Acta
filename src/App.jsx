@@ -15,13 +15,16 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/create-post" element={<CreatePost />} />
-          <Route path="/post/:postID" element={<Post />} />
-          <Route path="/profile/:userID" element={<Profile />} />
-        </Routes>
+        <div className="App--wrapper">
+          {/* This div wrapper used to give padding to page content */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/create-post" element={<CreatePost />} />
+            <Route path="/post/:postID" element={<Post />} />
+            <Route path="/profile/:userID" element={<Profile />} />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

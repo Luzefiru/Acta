@@ -1,4 +1,8 @@
+import './Post.css';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
+import AuthorCard from './AuthorCard';
 
 function Post(props) {
   const { postID } = useParams();
@@ -15,8 +19,39 @@ function Post(props) {
     tags: ['Programming', 'Computer Science', 'Technology'],
   };
   console.log(fetchedData.postID);
+  const fetchedUserProfilePicture = ProfilePicturePlaceholder; // placeholder
+  const datePosted = new Date(fetchedData.datePosted)
+    .toDateString()
+    .split(' ')
+    .slice(1)
+    .join(' ');
 
-  return <div className="Post">I'm in Post!</div>;
+  return (
+    <div className="Post">
+      <div className="Post--header">
+        <h1 className="Post__title">{fetchedData.title}</h1>
+        <div className="Post__date">
+          <span className="Post__date__heading">Created On</span>
+          {datePosted}
+        </div>
+        <Link
+          className="Post__AuthorCard--link"
+          to={`/profile/${fetchedData.authorUID}`}
+        >
+          <AuthorCard
+            name="John Doe"
+            title="Writer"
+            profilePictureURL={fetchedUserProfilePicture}
+          />
+        </Link>
+        <div className="Post__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          quidem praesentium deleniti illum totam omnis expedita explicabo
+          dolores.
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Post;
