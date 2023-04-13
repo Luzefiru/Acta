@@ -38,6 +38,16 @@ describe('The filterPosts module', () => {
       sampleData.slice(0, 2)
     );
   });
+
+  it('should return the posts with {postID} "0000001" & "0000002" we filter by ["Computer Science", "Technology"]', () => {
+    expect(filterPosts.byTag(sampleData, ['Technology'])).toEqual(
+      sampleData.slice(0, 2)
+    );
+  });
+
+  it('should return null when we filter by ["News", "Network Engineering"]', () => {
+    expect(filterPosts.byTag(sampleData, ['Technology'])).toBe(null);
+  });
 });
 
 var sampleData = [
