@@ -46,11 +46,6 @@ nav a:hover {
   background-color: var(--primary-alt);
 }
 
-.Navbar__links__new-post-icon,
-.Navbar__links__feed-icon {
-  color: var(--black);
-}
-
 .Navbar__profile-photo {
   display: flex;
   align-items: center;
@@ -85,11 +80,46 @@ nav a:hover {
   color: var(--icon);
 }
 
+.expandedNavItems {
+  display: none;
+  height: 100%;
+}
 .Navbar__nav-expand-button:hover {
   color: var(--icon-hover);
 }
 
+.expandedNavItems__menu-title {
+  text-transform: uppercase;
+  color: var(--subtext);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  align-self: start;
+  margin-top: 2rem;
+}
+
+.expandedNavItems > a {
+  display: flex;
+  gap: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.Link--logout,
+.Link--logout:hover {
+  margin-top: auto;
+  color: var(--destructive);
+}
+
 @media only screen and (max-width: 768px) {
+  .expandedNavItems {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-self: baseline;
+  }
+
   nav.expanded header > *:not(.Navbar__links),
   nav.expanded .App > *:not(.Navbar) {
     transition: filter 88ms ease-in;
@@ -101,9 +131,15 @@ nav a:hover {
   }
 
   .Navbar__links,
-  a[href='/create-post'],
-  a[href='/feed'] {
+  .Navbar__links > a[href='/feed'] {
     display: none;
+  }
+
+  .Navbar__links__button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 16px;
   }
 
   .Navbar__nav-expand-button {
@@ -117,8 +153,9 @@ nav a:hover {
     display: grid;
     padding: 5% 5%;
     justify-content: center;
-    grid-template-rows: 88px 10px 10px;
-    gap: 32px;
+    grid-template-rows: 88px 1px 1fr;
+    grid-template-columns: 100%;
+    gap: 24px;
     background-color: var(--surface);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     position: absolute;
