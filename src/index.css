@@ -26,6 +26,7 @@
 
 body {
   background-color: var(--surface);
+  color: var(--text);
 }
 
 /* Font stacks */

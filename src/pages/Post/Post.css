@@ -1,0 +1,89 @@
+.Post {
+  display: flex;
+  flex-direction: column;
+}
+
+.Post--header {
+  display: grid;
+  grid-template-areas:
+    'title date'
+    'description author';
+  align-items: center;
+  row-gap: 24px;
+  grid-template-columns: 3fr 1fr;
+}
+
+.Post__title {
+  grid-area: title;
+  font-size: 1.75rem;
+}
+
+.Post__date {
+  grid-area: date;
+  align-self: start;
+  display: grid;
+  justify-items: end;
+  line-height: 3ch;
+}
+
+.Post__date__heading {
+  font-weight: 600;
+}
+
+.Post__AuthorCard--link {
+  all: unset;
+  align-self: end;
+  grid-area: author;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Post__description {
+  grid-area: description;
+  align-self: start;
+  line-height: 1.4;
+}
+
+img.Post__cover {
+  justify-self: center;
+  margin-top: calc(
+    (24px + 32px) / 2
+  ); /* Post--header row-gap + App vertical padding / 2 */
+  width: calc(100% - 8px);
+  height: 30vw;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 768px) {
+  .Post__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Post--header {
+    display: grid;
+    grid-template-areas:
+      'date author'
+      'title title'
+      'description description';
+    align-items: center;
+    row-gap: 16px;
+  }
+
+  .Post__date {
+    grid-area: date;
+    display: grid;
+    justify-items: start;
+    line-height: 2.5ch;
+  }
+
+  .Post__description {
+    padding: 0 32px;
+  }
+
+  .Post__title {
+    text-align: center;
+  }
+}
