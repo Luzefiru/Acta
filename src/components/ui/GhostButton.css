@@ -1,16 +1,14 @@
 .ghostButton {
-    padding: 8px 16px;
-    width: 5rem;
-    border-radius: 8px;
-    background-color: white;
-    color: var(--primary);
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--primary-alt);
+  all: unset;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--primary);
+  font-weight: 500;
+  border: 1px solid var(--primary-alt);
 }
 
 .ghostButton:hover {
-    cursor: pointer;
-    background-color: var(--surface-alt);
+  cursor: pointer;
+  background-color: var(--surface-alt);
 }
