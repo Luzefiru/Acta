@@ -1,4 +1,4 @@
-.footer {
+.Footer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -7,15 +7,15 @@
   padding: 6rem 6rem 2rem 6rem;
 }
 
-.product,
-.resources,
-.company {
+.Footer__product,
+.Footer__resources,
+.Footer__company {
   display: flex;
   flex-direction: column;
   line-height: 32px;
 }
 
-.footer-content {
+.Footer--wrapper {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -31,10 +31,10 @@ p {
   color: var(--subtext);
 }
 
-.Logo > svg {
+.Footer--wrapper .Logo > svg {
   transition: transform 0.8s ease-in-out;
 }
 
-.Logo > svg:hover {
+.Footer--wrapper .Logo > svg:hover {
   transform: rotate(360deg);
 }
