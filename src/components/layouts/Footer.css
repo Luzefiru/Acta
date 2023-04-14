@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 32px;
   background-color: black;
   padding: 6rem 6rem 2rem 6rem;
 }
@@ -16,18 +16,37 @@
 }
 
 .Footer--wrapper {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-areas:
+    'logo product resources company'
+    'copyright copyright copyright copyright';
+  align-items: start;
   justify-content: space-around;
   width: 100%;
 }
 
-h3 {
+.Footer__product {
+  grid-area: product;
+}
+
+.Footer__resources {
+  grid-area: resources;
+}
+
+.Footer__company {
+  grid-area: company;
+}
+
+.Footer__copyright {
+  grid-area: copyright;
+}
+
+.Footer h3 {
   color: var(--surface-alt);
 }
 
-a,
-p {
+.Footer a,
+.Footer__copyright > p {
   color: var(--subtext);
 }
 
@@ -37,4 +56,18 @@ p {
 
 .Footer--wrapper .Logo > svg:hover {
   transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .Footer {
+    padding: 6rem 1.5rem 1rem 1.5rem;
+  }
+
+  .Footer--wrapper {
+    grid-template-areas:
+      'logo product'
+      'resources company'
+      'copyright copyright';
+    row-gap: 32px;
+  }
 }

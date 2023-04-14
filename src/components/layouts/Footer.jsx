@@ -15,7 +15,7 @@ function Footer() {
         <div className="Footer__resources">
           <h3>Resources</h3>
           <a>Blog</a>
-          <a>User guides</a>
+          <a>User Guides</a>
         </div>
         <div className="Footer__company">
           <h3>Company</h3>
