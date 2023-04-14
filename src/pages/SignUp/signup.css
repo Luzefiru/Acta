@@ -106,3 +106,12 @@
 .github:hover {
   background-color: #ebebeb;
 }
+
+@media only screen and (max-width: 768px) {
+  .SignUp {
+    width: 80vw;
+    padding: 8px 12px;
+    border: 1.5px solid var(--black);
+    border-radius: 8px;
+  }
+}
