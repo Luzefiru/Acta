@@ -13,7 +13,7 @@
   --icon-hover: #000000;
 
   --text: #212121;
-  --subtext: #afafaf;
+  --subtext: #7a7a7e;
 
   --surface: #fafafa;
   --surface-alt: #f0eeea;
@@ -25,6 +25,8 @@
 
   --tag-bg: #fda50d35;
   --tag-text: #fda50d;
+
+  --border: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 body {

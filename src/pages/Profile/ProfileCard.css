@@ -1,0 +1,33 @@
+.ProfileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: var(--border);
+  padding: 32px;
+  position: relative;
+}
+
+.ProfileCard__img {
+  width: 9rem;
+  border-radius: 100%;
+}
+
+.ProfileCard__edit-btn {
+  background-color: var(--primary);
+  border: 2px solid var(--surface);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: var(--surface);
+  position: absolute;
+  top: 9rem;
+  left: calc(50% + 32px); /* 50% of card container + padding */
+  cursor: pointer;
+}
+
+.ProfileCard__edit-btn:hover {
+  background-color: var(--primary-alt);
+}
