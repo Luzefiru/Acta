@@ -101,7 +101,6 @@ img.Post__cover {
     grid-area: date;
     display: grid;
     justify-items: start;
-    line-height: 1.5;
   }
 
   .Post__description {
