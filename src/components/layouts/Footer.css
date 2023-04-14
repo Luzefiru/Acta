@@ -5,6 +5,7 @@
   gap: 32px;
   background-color: black;
   padding: 6rem 6rem 2rem 6rem;
+  margin-top: auto; /* moves to the bottom when parent is display: flex */
 }
 
 .Footer__product,

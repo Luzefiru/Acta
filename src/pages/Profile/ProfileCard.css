@@ -1,0 +1,96 @@
+.ProfileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: var(--border);
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  resize: none;
+}
+
+.ProfileCard__img {
+  width: 9rem;
+  border-radius: 100%;
+}
+
+.ProfileCard__edit-btn {
+  background-color: var(--primary);
+  border: 2px solid var(--surface);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: var(--surface);
+  position: absolute;
+  top: 9rem;
+  left: calc(50% + 32px); /* 50% of card container + padding */
+  cursor: pointer;
+}
+
+.ProfileCard__edit-btn:hover {
+  background-color: var(--primary-alt);
+}
+
+.ProfileCard__name {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.ProfileCard__title {
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.ProfileCard__bio {
+  color: var(--subtext);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.ProfileCard hr {
+  width: 100%;
+  border: 1px var(--subtext) solid;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.ProfileCard__name,
+.ProfileCard__title,
+.ProfileCard__bio {
+  text-align: center;
+}
+
+.ProfileCard__link {
+  display: flex;
+  width: 100%;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.ProfileCard__link-field {
+  background-color: var(--surface-alt);
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.ProfileCard__link-field__text {
+  margin-right: auto;
+}
+
+.ProfileCard__link-field__clipboard {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}

@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 
 const Navbar = () => {
   const expandNavbar = () => {
-    console.log('hi');
     document.querySelector('.Navbar').classList.toggle('expanded');
     document.querySelector('.App').classList.toggle('blur');
   };
