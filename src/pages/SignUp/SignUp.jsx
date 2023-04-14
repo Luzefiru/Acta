@@ -1,5 +1,5 @@
 import './SignUp.css';
-import LogoApple from '../../assets/logo-apple.svg';
+import LogoGitHub from '../../assets/logo-github.svg';
 import LogoFacebook from '../../assets/logo-facebook.svg';
 import LogoGoogle from '../../assets/logo-google.svg';
 
@@ -23,14 +23,14 @@ function SignUp() {
       <button class="SignUp__submit-btn">Sign up</button>
       <p className="SignUp__alternative">or sign up with</p>
       <div class="SignUp__options">
-        <button class="SignUp__options__option">
-          <img alt="Apple Login" src={LogoApple} />
+        <button class="SignUp__options__option google">
+          <img alt="Google Login" src={LogoGoogle} />
         </button>
-        <button class="SignUp__options__option">
+        <button class="SignUp__options__option facebook">
           <img alt="Facebook Login" src={LogoFacebook} />
         </button>
-        <button class="SignUp__options__option">
-          <img alt="Google Login" src={LogoGoogle} />
+        <button class="SignUp__options__option github">
+          <img alt="GitHub Login" src={LogoGitHub} />
         </button>
       </div>
     </div>
