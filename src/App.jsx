@@ -1,7 +1,5 @@
 /* stylesheet import */
 import './App.css';
-/* library imports */
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 /* JSX component imports */
 import Navbar from './components/layouts/Navbar.jsx';
 import Footer from './components/layouts/Footer.jsx';
@@ -13,6 +11,8 @@ import Feed from './pages/Feed/Feed.jsx';
 import CreatePost from './pages/CreatePost/CreatePost.jsx';
 import Post from './pages/Post/Post.jsx';
 import Profile from './pages/Profile/Profile.jsx';
+/* library imports */
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
