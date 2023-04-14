@@ -3,7 +3,7 @@
   grid-template-areas:
     'heading nav'
     'profile-card details';
-  grid-template-columns: 5fr 11fr;
+  grid-template-columns: 4fr 11fr;
   column-gap: 32px;
   row-gap: 24px;
 }
@@ -39,7 +39,7 @@
   padding: 8px 16px;
   height: 100%;
   position: relative;
-  color: var(--subtext);
+  color: var(--tab-header);
 }
 
 .Profile__tabs__header.active {

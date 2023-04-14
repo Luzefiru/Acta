@@ -13,10 +13,10 @@
   --icon-hover: #000000;
 
   --text: #212121;
-  --subtext: #7a7a7e;
+  --subtext: #ababaf;
 
   --surface: #fafafa;
-  --surface-alt: #f0eeea;
+  --surface-alt: #ebebee;
 
   --black: #000000;
   --white: #ffffff;
@@ -27,6 +27,7 @@
   --tag-text: #fda50d;
 
   --border: 0 0 2px rgba(0, 0, 0, 0.2);
+  --tab-header: #7a7a7e;
 }
 
 body {

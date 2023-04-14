@@ -1,0 +1,21 @@
+.ClipboardField {
+  background-color: var(--surface-alt);
+  padding: 8px;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.ClipboardField__text {
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.ClipboardField__clipboard {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  margin-left: 8px;
+}

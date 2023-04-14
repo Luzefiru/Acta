@@ -1,5 +1,6 @@
 import './ProfileCard.css';
 import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
+import ClipboardField from './ClipboardField';
 
 function ProfileCard() {
   return (
@@ -26,6 +27,14 @@ function ProfileCard() {
           <circle cx="12" cy="13" r="3"></circle>
         </svg>
       </div>
+      <h3 className="ProfileCard__name">Christian Antonio IV L. de Jesus</h3>
+      <div className="ProfileCard__title">Professional Title</div>
+      <div className="ProfileCard__bio">
+        Aperiam quidem praesentium deleniti illum totam omnis expedita expl.
+      </div>
+      <hr />
+      <div className="ProfileCard__link">Profile Link</div>
+      <ClipboardField />
     </div>
   );
 }
