@@ -1,10 +1,10 @@
 import './Auth.css';
-import SignUp from './SignUp';
+import { Outlet } from 'react-router-dom';
 
 function Auth() {
   return (
     <div className="Auth">
-      <SignUp />
+      <Outlet />
     </div>
   );
 }

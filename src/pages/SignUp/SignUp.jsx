@@ -3,12 +3,13 @@ import LogoGitHub from '../../assets/logo-github.svg';
 import LogoFacebook from '../../assets/logo-facebook.svg';
 import LogoGoogle from '../../assets/logo-google.svg';
 import TextField from '../../components/forms/TextField';
+import { Link } from 'react-router-dom';
 
 function SignUp() {
   return (
     <div class="SignUp">
       <h1>Create an account</h1>
-      <TextField label="Full name" placeholder="John Doe" />
+      <TextField label="Full Name" placeholder="John Doe" />
       <TextField
         type="email"
         label="Email"
@@ -33,6 +34,10 @@ function SignUp() {
         <button class="SignUp__options__option github">
           <img alt="GitHub Login" src={LogoGitHub} />
         </button>
+      </div>
+      <div class="SignUp__link">
+        Already have an account? Log in&nbsp;
+        <Link to="/auth/login">here</Link>
       </div>
     </div>
   );
