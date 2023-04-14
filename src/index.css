@@ -22,6 +22,9 @@
   --white: #ffffff;
   --destructive: #dd2c00;
   --positive: #00c853;
+
+  --tag-bg: #fda50d35;
+  --tag-text: #fda50d;
 }
 
 body {

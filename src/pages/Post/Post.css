@@ -72,6 +72,14 @@ img.Post__cover {
   );
 }
 
+.Post__tags {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 @media only screen and (min-width: 768px) {
   .Post__title {
     font-size: 2.5rem;
@@ -102,5 +110,9 @@ img.Post__cover {
 
   .Post__title {
     text-align: center;
+  }
+
+  .Post__tags {
+    justify-content: center;
   }
 }

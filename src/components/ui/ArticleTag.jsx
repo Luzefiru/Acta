@@ -1,3 +1,5 @@
+import './ArticleTag.css';
+
 function ArticleTag(props) {
   const { content } = props;
   return <div className="ArticleTag">{content}</div>;
