@@ -43,7 +43,12 @@
 .Post__description {
   grid-area: description;
   align-self: start;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+.Post__body {
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 
 img.Post__cover {
@@ -88,7 +93,7 @@ img.Post__cover {
     grid-area: date;
     display: grid;
     justify-items: start;
-    line-height: 2.5ch;
+    line-height: 1.5;
   }
 
   .Post__description {

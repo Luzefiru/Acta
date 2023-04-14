@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
 import CoverImagePlaceholder from '../../assets/placeholder-cover.jpg';
 import AuthorCard from './AuthorCard';
+import ArticleTag from '../../components/ui/ArticleTag';
 
 function Post(props) {
   const { postID } = useParams();
@@ -61,8 +62,21 @@ function Post(props) {
       ></img>
       <article className="Post__body">{fetchedData.body}</article>
       <hr />
+      <div className="Post__tags">{generateArticleTags(fetchedData.tags)}</div>
     </div>
   );
 }
 
 export default Post;
+
+/**
+ * Creates a <React.Fragment> of ArticleTag components that correspond to the fetched data's tag array.
+ */
+function generateArticleTags(fetchedDataTags) {
+  const articleTags = [];
+  for (const tag of fetchedDataTags) {
+    articleTags.push(<ArticleTag content={tag} />);
+  }
+
+  return <>{articleTags}</>;
+}
