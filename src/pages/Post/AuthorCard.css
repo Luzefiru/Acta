@@ -7,6 +7,7 @@
     'name picture'
     'title picture';
   justify-items: end;
+  cursor: pointer;
 }
 
 .AuthorCard__heading {
