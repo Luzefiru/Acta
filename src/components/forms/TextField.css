@@ -1,0 +1,29 @@
+.TextField {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 16px;
+}
+
+.TextField__label {
+  background-color: var(--field);
+  width: 100%;
+  padding: 4px 8px;
+  font-weight: 500;
+  color: rgb(104, 101, 101);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.TextField input {
+  border: none;
+  background-color: var(--field);
+  width: 100%;
+  padding: 4px 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.TextField input:focus {
+  outline: none;
+}

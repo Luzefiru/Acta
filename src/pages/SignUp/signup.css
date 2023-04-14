@@ -10,46 +10,16 @@
   text-align: center;
 }
 
-.FormField {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-bottom: 16px;
-}
-
-.SignUp input {
-  border: none;
-  background-color: var(--field);
-  width: 100%;
-  padding: 4px 8px;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
-.SignUp input:focus {
-  outline: none;
-}
-
-.FormField__field {
-  background-color: var(--field);
-  width: 100%;
-  padding: 4px 8px;
-  font-weight: bold;
-  color: rgb(104, 101, 101);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
 .SignUp__submit-btn {
   width: 100%;
-  padding: 0.6rem 0.5rem;
+  padding: 10px 8px;
   font-size: 1rem;
   font-weight: 500;
   border: none;
   color: white;
   background-color: var(--primary);
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
+  margin-top: 8px;
+  margin-bottom: 16px;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -60,7 +30,8 @@
 
 .SignUp__alternative {
   text-align: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 8px;
+  color: var(--tab-header);
 }
 
 .SignUp__options {
@@ -110,7 +81,7 @@
 @media only screen and (max-width: 768px) {
   .SignUp {
     width: 80vw;
-    padding: 8px 12px;
+    padding: 8px 16px;
     border: 1.5px solid var(--black);
     border-radius: 8px;
   }
