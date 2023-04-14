@@ -1,0 +1,8 @@
+.Profile {
+  display: grid;
+  grid-template-areas:
+    'heading nav'
+    'profile-card details';
+  grid-template-columns: 2fr 4fr;
+  column-gap: 32px;
+}
