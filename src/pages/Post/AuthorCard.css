@@ -12,6 +12,7 @@
 .AuthorCard__heading {
   grid-area: heading;
   font-size: 1rem;
+  color: var(--text);
 }
 
 .AuthorCard__name {
