@@ -103,8 +103,17 @@ img.Post__cover {
     justify-items: start;
   }
 
-  .Post__description {
+  .Post__description,
+  .Post__body {
     padding: 0 32px;
+  }
+
+  .Post__description {
+    font-size: 0.8rem;
+  }
+
+  .Post__body {
+    font-size: 1rem;
   }
 
   .Post__title {
