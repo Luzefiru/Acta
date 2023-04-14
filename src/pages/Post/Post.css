@@ -48,13 +48,23 @@
 
 img.Post__cover {
   justify-self: center;
-  margin-top: calc(
-    (24px + 32px) / 2
-  ); /* Post--header row-gap + App vertical padding / 2 */
+  margin: calc((24px + 32px) / 2) 0; /* Post--header row-gap + App vertical padding / 2 */
   width: calc(100% - 8px);
   height: 30vw;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.Post hr {
+  margin: 32px 0;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 @media only screen and (min-width: 768px) {

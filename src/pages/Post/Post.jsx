@@ -17,6 +17,12 @@ function Post(props) {
     datePosted: 1681354006526,
     coverImageURL: CoverImagePlaceholder,
     title: 'Functional Versus Object-Oriented Programming',
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+    quidem praesentium deleniti illum totam omnis expedita explicabo
+    dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Aperiam quidem praesentium deleniti illum totam omnis expedita
+    explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
+    elit.`,
     body: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem praesentium deleniti illum totam omnis expedita explicabo dolores. Quidem, minus accusamus earum temporibus laudantium dolorum, iusto quas voluptas neque facere id tempora possimus ea harum rerum dolor culpa inventore, est repellendus voluptatibus similique iure. Rerum odio beatae nulla assumenda consequatur!',
     tags: ['Programming', 'Computer Science', 'Technology'],
   };
@@ -46,25 +52,15 @@ function Post(props) {
             profilePictureURL={fetchedUserProfilePicture}
           />
         </Link>
-        <div className="Post__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-          quidem praesentium deleniti illum totam omnis expedita explicabo
-          dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Aperiam quidem praesentium deleniti illum totam omnis expedita
-          explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Aperiam quidem praesentium deleniti illum totam omnis expedita
-          explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Aperiam quidem praesentium deleniti illum totam omnis expedita
-          explicabo dolores. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Aperiam quidem praesentium deleniti illum totam omnis expedita
-          explicabo dolores.
-        </div>
+        <div className="Post__description">{fetchedData.description}</div>
       </div>
       <img
         className="Post__cover"
         src={fetchedData.coverImageURL}
         alt="Cover"
       ></img>
+      <article className="Post__body">{fetchedData.body}</article>
+      <hr />
     </div>
   );
 }
