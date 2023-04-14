@@ -46,8 +46,25 @@
 }
 
 .Footer a,
-.Footer__copyright > p {
+.Footer__copyright > a {
   color: var(--subtext);
+}
+
+.Footer a,
+.Footer__copyright > a {
+  cursor: pointer;
+}
+
+.Footer__copyright > a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.Footer a:hover,
+.Footer__copyright > p:hover {
+  color: var(--white);
 }
 
 .Footer--wrapper .Logo > svg {
