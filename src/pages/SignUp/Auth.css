@@ -1,4 +1,7 @@
 .Auth {
   display: grid;
   place-items: center;
+  height: calc(
+    100svh - 64px - 32px - 64px
+  ); /* - Navbar height - App--wrapper top padding - &bottom padding*/
 }
