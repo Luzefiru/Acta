@@ -8,6 +8,13 @@
   row-gap: 24px;
 }
 
+@media only screen and (max-width: 768px) {
+  .Profile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .Profile__heading {
   grid-area: heading;
   font-size: 3rem;

@@ -19,3 +19,9 @@
   cursor: pointer;
   margin-left: 8px;
 }
+
+@media only screen and (max-width: 768px) {
+  .ClipboardField {
+    font-size: 0.65rem;
+  }
+}
