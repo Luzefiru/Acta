@@ -13,6 +13,7 @@
   color: rgb(104, 101, 101);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  text-align: left;
 }
 
 .TextField input {
