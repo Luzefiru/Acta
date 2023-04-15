@@ -13,7 +13,13 @@
   grid-area: aside;
 }
 
+.Feed .header:first-child {
+  margin-top: 0;
+}
+
 .Feed .header {
+  margin-top: 24px;
+  font-size: 1.75rem;
   margin-bottom: 16px;
 }
 

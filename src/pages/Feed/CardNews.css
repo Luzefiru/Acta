@@ -30,6 +30,7 @@
 
 .CardNews__details__header {
   font-size: max(1vw, 0.6rem);
+  font-weight: 500;
 }
 
 .CardNews__details__date {

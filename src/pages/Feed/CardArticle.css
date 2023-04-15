@@ -24,6 +24,11 @@
   padding: 24px;
 }
 
+.CardArticle__details__header {
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
 .CardArticle__details__description {
   color: var(--subtext);
   margin: 16px 0;

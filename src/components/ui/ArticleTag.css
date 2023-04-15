@@ -8,4 +8,5 @@
   color: var(--tag-text);
   background-color: var(--tag-bg);
   border-radius: 8px;
+  cursor: pointer;
 }
