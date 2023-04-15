@@ -27,3 +27,7 @@
 .CardArticle__details__header {
   margin-bottom: 16px;
 }
+
+.CardArticle__details__description {
+  color: var(--subtext);
+}
