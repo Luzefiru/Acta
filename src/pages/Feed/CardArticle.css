@@ -13,8 +13,7 @@
 }
 
 .CardArticle__img {
-  width: clamp(150px, 30lvw, 12rem);
-  height: 100%;
+  width: clamp(100px, 30lvw, 12rem);
   object-fit: cover;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -26,7 +25,7 @@
 
 .CardArticle__details__header {
   font-weight: 500;
-  font-size: min(4vw, 1.35rem);
+  font-size: clamp(0.8rem, 3vw, 1.55rem);
   display: flex;
   flex-wrap: wrap;
 }
@@ -34,10 +33,45 @@
 .CardArticle__details__description {
   color: var(--subtext);
   margin: 16px 0;
-  font-size: min(3vw, 1.35rem);
+  font-size: max(0.2vw, 1.1rem);
 }
 
 .CardArticle__details__tags {
   display: flex;
   gap: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .CardArticle {
+    height: 20lvh;
+  }
+
+  .CardArticle__details {
+    padding: 16px;
+  }
+
+  .CardArticle__details__description {
+    color: var(--subtext);
+    margin: 8px 0;
+    font-size: clamp(0.5rem, 2.5vw, 1.35rem);
+  }
+
+  .CardArticle__details__tags {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .CardArticle__details__description {
+    color: var(--subtext);
+    margin: 8px 0;
+    font-size: clamp(0.5rem, 1.5vw, 1.35rem);
+  }
+
+  .CardArticle__details__header {
+    font-weight: 500;
+    font-size: clamp(0.8rem, 2vw, 1.55rem);
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
