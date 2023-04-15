@@ -1,5 +1,6 @@
 import './Profile.css';
 import ProfileCard from './ProfileCard';
+import TabGeneral from './TabGeneral';
 
 function Profile() {
   return (
@@ -12,6 +13,7 @@ function Profile() {
         </ul>
       </nav>
       <ProfileCard />
+      <TabGeneral />
     </div>
   );
 }

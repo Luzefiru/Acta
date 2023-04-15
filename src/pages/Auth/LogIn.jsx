@@ -2,7 +2,7 @@ import './LogIn.css';
 import LogoGitHub from '../../assets/logo-github.svg';
 import LogoFacebook from '../../assets/logo-facebook.svg';
 import LogoGoogle from '../../assets/logo-google.svg';
-import TextField from '../../components/forms/TextField';
+import AuthTextField from '../../components/forms/AuthTextField';
 import { Link } from 'react-router-dom';
 
 function LogIn() {
@@ -11,12 +11,12 @@ function LogIn() {
       <h1>
         Log in to <span>Acta</span>
       </h1>
-      <TextField
+      <AuthTextField
         type="email"
         label="Email"
         placeholder="example.email@gmail.com"
       />
-      <TextField
+      <AuthTextField
         type="password"
         label="Password"
         placeholder="Enter at least 8+ characters"

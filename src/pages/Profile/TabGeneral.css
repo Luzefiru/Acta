@@ -1,0 +1,13 @@
+.TabGeneral {
+  padding: 24px;
+  box-shadow: var(--border);
+  border-radius: 8px;
+}
+
+.TabGeneral__header {
+  font-size: 2rem;
+}
+
+.TabGeneral__fieldset {
+  all: unset;
+}

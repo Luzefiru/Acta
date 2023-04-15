@@ -2,20 +2,20 @@ import './SignUp.css';
 import LogoGitHub from '../../assets/logo-github.svg';
 import LogoFacebook from '../../assets/logo-facebook.svg';
 import LogoGoogle from '../../assets/logo-google.svg';
-import TextField from '../../components/forms/TextField';
+import AuthTextField from '../../components/forms/AuthTextField';
 import { Link } from 'react-router-dom';
 
 function SignUp() {
   return (
     <div class="SignUp">
       <h1>Create an account</h1>
-      <TextField label="Full Name" placeholder="John Doe" />
-      <TextField
+      <AuthTextField label="Full Name" placeholder="John Doe" />
+      <AuthTextField
         type="email"
         label="Email"
         placeholder="example.email@gmail.com"
       />
-      <TextField
+      <AuthTextField
         type="password"
         label="Password"
         placeholder="Enter at least 8+ characters"
