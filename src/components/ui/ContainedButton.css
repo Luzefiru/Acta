@@ -3,6 +3,9 @@
   border-radius: 8px;
   background-color: var(--primary);
   color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
 }
 
