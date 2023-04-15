@@ -1,7 +1,8 @@
 .Feed {
   display: grid;
   grid-template-areas: 'main aside';
-  grid-template-columns: 9fr 3fr;
+  grid-template-columns: 8fr 4fr;
+  column-gap: 32px;
 }
 
 .Feed__main {

@@ -1,0 +1,33 @@
+.FilterController {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--white);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: var(--border-hover);
+}
+
+.FilterController__input {
+  outline: none;
+  border: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.FilterController__input__icon,
+.FilterController__dropdown {
+  color: var(--icon);
+}
+
+.FilterController__dropdown {
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.FilterController__dropdown:hover {
+  color: var(--icon-hover);
+}
