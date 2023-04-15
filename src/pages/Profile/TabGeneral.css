@@ -54,3 +54,14 @@
   margin-top: 24px;
   margin-bottom: 16px;
 }
+
+/* aligns the button to the right */
+.TabGeneral__btn--wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.TabGeneral__btn--wrapper > button {
+  margin-top: 24px;
+}

@@ -1,14 +1,12 @@
-.containedButton {
+.ContainedButton {
   all: unset;
-  padding: 8px 16px;
   border-radius: 8px;
   background-color: var(--primary);
   color: white;
-  font-weight: 500;
   /* box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); */
 }
 
-.containedButton:hover {
+.ContainedButton:hover {
   cursor: pointer;
   background-color: var(--primary-alt);
 }

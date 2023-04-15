@@ -1,6 +1,7 @@
 import './TabGeneral.css';
 import TextField from '../../components/forms/TextField';
 import TextArea from '../../components/forms/TextArea';
+import ContainedButton from '../../components/ui/ContainedButton';
 
 function TabGeneral() {
   return (
@@ -44,6 +45,15 @@ function TabGeneral() {
           placeholder="●●●●●●●●"
         />
       </fieldset>
+      <div className="TabGeneral__btn--wrapper">
+        <ContainedButton
+          padding="12px 24px"
+          fontWeight="400"
+          className="TabGeneral__btn--submit"
+        >
+          Save Information
+        </ContainedButton>
+      </div>
     </form>
   );
 }
