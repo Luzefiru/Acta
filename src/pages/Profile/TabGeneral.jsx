@@ -48,7 +48,6 @@ function TabGeneral() {
       <div className="TabGeneral__btn--wrapper">
         <ContainedButton
           padding="12px 24px"
-          fontWeight="400"
           className="TabGeneral__btn--submit"
         >
           Save Information
