@@ -26,6 +26,30 @@ function TabGeneral() {
           placeholder="Say something about yourself"
         />
       </fieldset>
+
+      <hr />
+
+      <h2 className="TabGeneral__header">Account</h2>
+      <fieldset className="TabGeneral__fieldset profile">
+        <TextField
+          className="TabGeneral__fieldset__fullName"
+          id="fullName"
+          label="Full Name"
+          placeholder="Your full name"
+        />
+        <TextField
+          className="TabGeneral__fieldset__displayName"
+          id="displayName"
+          label="Display Name"
+          placeholder="Your display name"
+        />
+        <TextArea
+          className="TabGeneral__fieldset__bio"
+          id="bio"
+          label="Bio"
+          placeholder="Say something about yourself"
+        />
+      </fieldset>
     </form>
   );
 }

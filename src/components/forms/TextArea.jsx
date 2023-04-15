@@ -13,7 +13,7 @@ function TextArea(props) {
         name={id}
         id={id}
         placeholder={placeholder}
-        rows="5"
+        rows="6"
       ></textarea>
     </div>
   );

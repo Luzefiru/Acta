@@ -46,3 +46,11 @@
 .TabGeneral__fieldset__bio {
   grid-area: bio;
 }
+
+.TabGeneral hr {
+  width: 100%;
+  border: 1px var(--subtext) solid;
+  border-radius: 8px;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
