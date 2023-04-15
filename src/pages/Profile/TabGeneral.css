@@ -14,3 +14,34 @@
   all: unset;
   width: 100%;
 }
+
+.TabGeneral__fieldset.profile {
+  display: grid;
+  grid-template-areas:
+    'fullName displayName'
+    'title title'
+    'location location'
+    'bio bio';
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+}
+
+.TabGeneral__fieldset__fullName {
+  grid-area: fullName;
+}
+
+.TabGeneral__fieldset__displayName {
+  grid-area: displayName;
+}
+
+.TabGeneral__fieldset__title {
+  grid-area: title;
+}
+
+.TabGeneral__fieldset__location {
+  grid-area: location;
+}
+
+.TabGeneral__fieldset__bio {
+  grid-area: bio;
+}

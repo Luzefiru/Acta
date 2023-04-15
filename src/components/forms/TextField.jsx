@@ -1,9 +1,9 @@
 import './TextField.css';
 
 function TextField(props) {
-  const { label, id, placeholder } = props;
+  const { className, label, id, placeholder } = props;
   return (
-    <div className="TextField">
+    <div className={`TextField ${className}`}>
       <label className="TextField__label" for={id}>
         {label}
       </label>
