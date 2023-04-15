@@ -6,8 +6,11 @@
 
 .TabGeneral__header {
   font-size: 2rem;
+  margin-top: 8px;
+  margin-bottom: 24px;
 }
 
 .TabGeneral__fieldset {
   all: unset;
+  width: 100%;
 }

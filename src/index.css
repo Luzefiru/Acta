@@ -30,6 +30,7 @@
   --tab-header: #7a7a7e;
 
   --field: rgb(237, 241, 246);
+  --field-focus: #34343c;
 }
 
 body {

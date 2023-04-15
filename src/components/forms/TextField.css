@@ -1,0 +1,20 @@
+.TextField {
+  display: grid;
+  gap: 4px;
+}
+
+.TextField__label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.TextField__input {
+  border: none;
+  background-color: var(--field);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.TextField__input:focus {
+  outline: 2px solid var(--field-focus);
+}

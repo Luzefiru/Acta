@@ -1,12 +1,16 @@
 import './TabGeneral.css';
-import AuthTextField from '../../components/forms/AuthTextField';
+import TextField from '../../components/forms/TextField';
 
 function TabGeneral() {
   return (
     <form className="TabGeneral">
       <h2 className="TabGeneral__header">Profile</h2>
       <fieldset className="TabGeneral__fieldset">
-        <AuthTextField />
+        <TextField
+          id="fullName"
+          label="Full Name"
+          placeholder="Your full name"
+        />
       </fieldset>
     </form>
   );
