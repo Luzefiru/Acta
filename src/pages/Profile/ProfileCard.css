@@ -9,6 +9,7 @@
   max-width: 100%;
   height: fit-content;
   resize: none;
+  background-color: var(--white);
 }
 
 .ProfileCard__img {
