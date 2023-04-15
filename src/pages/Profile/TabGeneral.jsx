@@ -1,10 +1,11 @@
 import './TabGeneral.css';
 import TextField from '../../components/forms/TextField';
+import TextArea from '../../components/forms/TextArea';
 
 function TabGeneral() {
   return (
     <form className="TabGeneral">
-      <h2 className="TabGeneral__header">Profile</h2>
+      <h2 className="TabGeneral__header">Identification</h2>
       <fieldset className="TabGeneral__fieldset profile">
         <TextField
           className="TabGeneral__fieldset__fullName"
@@ -14,9 +15,15 @@ function TabGeneral() {
         />
         <TextField
           className="TabGeneral__fieldset__displayName"
-          id="dsiplayName"
+          id="displayName"
           label="Display Name"
           placeholder="Your display name"
+        />
+        <TextArea
+          className="TabGeneral__fieldset__bio"
+          id="bio"
+          label="Bio"
+          placeholder="Say something about yourself"
         />
       </fieldset>
     </form>

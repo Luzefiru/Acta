@@ -24,6 +24,7 @@
     'bio bio';
   grid-template-columns: 1fr 1fr;
   column-gap: 24px;
+  row-gap: 8px;
 }
 
 .TabGeneral__fieldset__fullName {

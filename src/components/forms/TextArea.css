@@ -1,20 +1,23 @@
-.TextField {
+.TextArea {
   display: grid;
   gap: 6px;
 }
 
-.TextField__label {
+.TextArea__label {
   font-weight: 600;
   font-size: 0.9rem;
 }
 
-.TextField__input {
+.TextArea__textarea {
   border: none;
+  font-family: inherit;
+  resize: vertical;
+  max-height: 144px;
   background-color: var(--field);
   border-radius: 4px;
   padding: 8px 12px;
 }
 
-.TextField__input:focus {
+.TextArea__textarea:focus {
   outline: 2px solid var(--field-focus);
 }
