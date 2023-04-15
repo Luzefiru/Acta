@@ -73,10 +73,5 @@ export default Post;
  * Creates a <React.Fragment> of ArticleTag components that correspond to the fetched data's tag array.
  */
 function generateArticleTags(fetchedDataTags) {
-  const articleTags = [];
-  for (const tag of fetchedDataTags) {
-    articleTags.push(<ArticleTag content={tag} />);
-  }
-
-  return <>{articleTags}</>;
+  return fetchedDataTags.map((tag) => <ArticleTag>{tag}</ArticleTag>);
 }

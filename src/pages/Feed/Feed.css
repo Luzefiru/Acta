@@ -1,0 +1,13 @@
+.Feed {
+  display: grid;
+  grid-template-areas: 'main aside';
+  grid-template-columns: 9fr 3fr;
+}
+
+.Feed__main {
+  grid-area: main;
+}
+
+.Feed__aside {
+  grid-area: aside;
+}

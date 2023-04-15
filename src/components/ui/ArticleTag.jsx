@@ -1,8 +1,7 @@
 import './ArticleTag.css';
 
 function ArticleTag(props) {
-  const { content } = props;
-  return <div className="ArticleTag">{content}</div>;
+  return <div className="ArticleTag">{props.children}</div>;
 }
 
 export default ArticleTag;
