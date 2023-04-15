@@ -1,5 +1,5 @@
 .Home__hero {
-  margin-top: 32px;
+  margin-top: 48px;
   display: grid;
   grid-template-areas: 'left right';
   grid-template-columns: 1fr 1fr;
@@ -19,6 +19,10 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.Home__hero__headline a {
+  all: unset;
 }
 
 .Home__hero__headline__subtext {

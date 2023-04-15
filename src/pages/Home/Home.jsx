@@ -1,6 +1,7 @@
 import './Home.css';
 import HeroIllustration from '../../assets/hero-illustration.svg';
 import ContainedButton from '../../components/ui/ContainedButton';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -18,7 +19,9 @@ function Home() {
             sharing your ideas with the world! It's quick, easy, and completely
             free - and who knows where it could take you?
           </div>
-          <ContainedButton padding="14px 24px">Sign Up Now</ContainedButton>
+          <Link to="/auth">
+            <ContainedButton padding="14px 24px">Sign Up Now</ContainedButton>
+          </Link>
         </div>
       </main>
     </div>
