@@ -13,7 +13,7 @@
   outline: none;
   border: none;
   flex: 1;
-  font-size: 1rem;
+  font-size: min(4lvw, 1rem);
 }
 
 .FilterController__input__icon,
@@ -22,11 +22,12 @@
 }
 
 .FilterController__dropdown {
-  font-size: 0.8rem;
+  font-size: min(3lvw, 0.8rem);
   font-weight: 600;
   display: flex;
   gap: 2px;
   cursor: pointer;
+  align-items: center;
 }
 
 .FilterController__dropdown:hover {

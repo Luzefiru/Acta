@@ -11,10 +11,10 @@ function Feed() {
         <h2 className="Feed__main header">Latest Articles</h2>
         <FilterController />
         <div className="Feed__main__cards">
+          {/* <CardArticle />
           <CardArticle />
           <CardArticle />
-          <CardArticle />
-          <CardArticle />
+          <CardArticle /> */}
         </div>
       </main>
       <aside className="Feed__aside">

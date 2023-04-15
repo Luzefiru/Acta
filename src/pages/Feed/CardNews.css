@@ -1,5 +1,5 @@
 .CardNews {
-  max-width: auto;
+  width: 100%;
   display: flex;
   gap: 16px;
   background-color: var(--white);
@@ -29,7 +29,7 @@
 }
 
 .CardNews__details__header {
-  font-size: max(1vw, 0.6rem);
+  font-size: 0.8rem;
   font-weight: 500;
 }
 

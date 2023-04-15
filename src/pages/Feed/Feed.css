@@ -3,14 +3,18 @@
   grid-template-areas: 'main aside';
   grid-template-columns: 8fr 4fr;
   column-gap: 32px;
+  width: 100%;
 }
 
 .Feed__main {
   grid-area: main;
+  display: flex;
+  flex-direction: column;
 }
 
 .Feed__aside {
   grid-area: aside;
+  width: 100%;
 }
 
 .Feed .header:first-child {
@@ -24,11 +28,27 @@
 }
 
 .Feed__aside__cards {
-  display: grid;
-  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
 }
 
 .Feed__main__cards {
   display: grid;
   row-gap: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Feed {
+    grid-template-areas:
+      'main'
+      'aside';
+    grid-template-columns: 1fr;
+    column-gap: none;
+  }
+
+  .Feed__aside .header:first-child {
+    margin-top: 24px;
+  }
 }

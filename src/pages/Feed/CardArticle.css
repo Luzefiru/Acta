@@ -13,7 +13,7 @@
 }
 
 .CardArticle__img {
-  width: 13rem;
+  width: clamp(150px, 30lvw, 12rem);
   height: 100%;
   object-fit: cover;
   border-top-left-radius: 16px;
@@ -26,12 +26,15 @@
 
 .CardArticle__details__header {
   font-weight: 500;
-  font-size: 1.35rem;
+  font-size: min(4vw, 1.35rem);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .CardArticle__details__description {
   color: var(--subtext);
   margin: 16px 0;
+  font-size: min(3vw, 1.35rem);
 }
 
 .CardArticle__details__tags {
