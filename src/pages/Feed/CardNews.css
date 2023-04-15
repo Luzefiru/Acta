@@ -1,0 +1,32 @@
+.CardNews {
+  max-width: 100%;
+  display: flex;
+  gap: 16px;
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: var(--border);
+  cursor: pointer;
+  transition: transform 30ms ease-in;
+}
+
+.CardNews:hover {
+  box-shadow: var(--border-hover);
+  transform: scale(1.01);
+}
+
+.CardNews__img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 8px;
+}
+
+.CardNews__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.CardNews__details__date {
+  color: var(--subtext);
+}
