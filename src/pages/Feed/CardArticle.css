@@ -14,7 +14,7 @@
 
 .CardArticle__img {
   width: 13rem;
-  height: 13rem;
+  height: 100%;
   object-fit: cover;
   border-top-left-radius: 16px;
   border-bottom-left-radius: 16px;
@@ -24,10 +24,12 @@
   padding: 24px;
 }
 
-.CardArticle__details__header {
-  margin-bottom: 16px;
-}
-
 .CardArticle__details__description {
   color: var(--subtext);
+  margin: 16px 0;
+}
+
+.CardArticle__details__tags {
+  display: flex;
+  gap: 8px;
 }

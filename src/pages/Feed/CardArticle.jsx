@@ -1,6 +1,9 @@
 import './CardArticle.css';
+import ArticleTag from '../../components/ui/ArticleTag';
 
-function CardArticle() {
+function CardArticle(props) {
+  const sampleTags = ['Programming', 'Technology', 'News'];
+
   return (
     <article className="CardArticle">
       <img
@@ -16,6 +19,11 @@ function CardArticle() {
           I started writing on Acta in November 2019 with the primary goal of
           earning a side income. I decided to write about my areas of expertise:
           software development, machine learning, and life in a tech startup.
+        </div>
+        <div className="CardArticle__details__tags">
+          {sampleTags.map((tag) => (
+            <ArticleTag>{tag}</ArticleTag>
+          ))}
         </div>
       </div>
     </article>
