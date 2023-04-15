@@ -13,7 +13,9 @@ function Profile() {
         </ul>
       </nav>
       <ProfileCard />
-      <TabGeneral />
+      <div className="Profile__details">
+        <TabGeneral />
+      </div>
     </div>
   );
 }

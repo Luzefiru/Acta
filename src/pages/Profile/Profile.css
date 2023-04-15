@@ -13,6 +13,14 @@
     display: flex;
     flex-direction: column;
   }
+
+  .Profile__tabs {
+    order: 1;
+  }
+
+  .Profile__details {
+    order: 2;
+  }
 }
 
 .Profile__heading {
