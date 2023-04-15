@@ -51,6 +51,7 @@ function Feed() {
 
 export default Feed;
 
+/* TODO: Create functions to fetch cards from database to load as cards */
 var fetchedNewsCards = [
   {
     imgSrc:
