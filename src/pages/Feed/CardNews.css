@@ -1,5 +1,5 @@
 .CardNews {
-  max-width: 100%;
+  max-width: auto;
   display: flex;
   gap: 16px;
   background-color: var(--white);
@@ -16,8 +16,8 @@
 }
 
 .CardNews__img {
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 8px;
 }
 
@@ -27,6 +27,11 @@
   justify-content: space-around;
 }
 
+.CardNews__details__header {
+  font-size: max(1vw, 0.6rem);
+}
+
 .CardNews__details__date {
+  font-size: max(1vw, 0.7rem);
   color: var(--subtext);
 }
