@@ -5,7 +5,8 @@
   background-color: var(--white);
   padding: 8px;
   border-radius: 8px;
-  box-shadow: var(--border-hover);
+  box-shadow: var(--border);
+  margin-bottom: 32px;
 }
 
 .FilterController__input {

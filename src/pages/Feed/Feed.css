@@ -15,10 +15,14 @@
 
 .Feed .header {
   margin-bottom: 16px;
-  margin-top: 16px;
 }
 
 .Feed__aside__cards {
   display: grid;
   row-gap: 16px;
+}
+
+.Feed__main__cards {
+  display: grid;
+  row-gap: 24px;
 }

@@ -1,6 +1,7 @@
 import './Feed.css';
 import CardNews from './CardNews';
 import FilterController from './FilterController';
+import CardArticle from './CardArticle';
 
 function Feed() {
   return (
@@ -8,6 +9,11 @@ function Feed() {
       <main className="Feed__main">
         <h2 className="Feed__main header">Latest Articles</h2>
         <FilterController />
+        <div className="Feed__main__cards">
+          <CardArticle />
+          <CardArticle />
+          <CardArticle />
+        </div>
       </main>
       <aside className="Feed__aside">
         <h2 className="Feed__aside header">News</h2>
