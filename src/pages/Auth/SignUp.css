@@ -4,6 +4,7 @@
   border: 1.5px solid var(--black);
   border-radius: 8px;
   text-align: center;
+  background-color: var(--white);
 }
 
 .SignUp h1 {

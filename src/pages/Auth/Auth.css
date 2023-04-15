@@ -5,3 +5,10 @@
     100svh - 64px - 32px - 64px
   ); /* - Navbar height - App--wrapper top padding - &bottom padding*/
 }
+
+.Auth__waves {
+  position: absolute;
+  width: 100lvw;
+  bottom: 0;
+  z-index: -1;
+}

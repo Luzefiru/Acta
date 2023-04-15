@@ -10,6 +10,7 @@
   padding: calc(32px + 64px) 24px 64px 24px; /* based on Medium.com's padding */
   position: relative;
   background: url(./assets/asfalt-light.png) repeat;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 768px) {
