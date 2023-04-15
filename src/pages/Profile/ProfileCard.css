@@ -6,7 +6,8 @@
   box-shadow: var(--border);
   padding: 24px;
   position: relative;
-  width: 100%;
+  max-width: 100%;
+  height: fit-content;
   resize: none;
 }
 
