@@ -6,7 +6,11 @@ function CardArticle(props) {
 
   return (
     <article className="CardArticle">
-      <img className="CardArticle__img" src={imgSrc} alt="Article Card" />
+      <img
+        className="CardArticle__img"
+        src={`https://picsum.photos/${Math.floor(Math.random() * 100) + 800}`}
+        alt="Article Card"
+      />
       <div className="CardArticle__details">
         <h2 className="CardArticle__details__header">{title}</h2>
         <div className="CardArticle__details__description">{description}</div>
