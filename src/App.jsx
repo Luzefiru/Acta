@@ -12,12 +12,12 @@ import CreatePost from './pages/CreatePost/CreatePost.jsx';
 import Post from './pages/Post/Post.jsx';
 import Profile from './pages/Profile/Profile.jsx';
 /* library imports */
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <div className="App--wrapper">
           {/* This div wrapper used to give padding to page content */}
@@ -34,7 +34,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
