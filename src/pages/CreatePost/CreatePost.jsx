@@ -3,7 +3,7 @@ import TextField from "../../components/forms/TextField";
 import TextArea from "../../components/forms/TextArea";
 import GhostButton from "../../components/ui/GhostButton";
 import ContainedButton from "../../components/ui/ContainedButton";
-import React, { useState } from "react";
+import WaveBackground from "../../assets/waves-slower.svg";
 
 function CreatePost() {
   return (
@@ -36,6 +36,11 @@ function CreatePost() {
           <ContainedButton>Save and Publish</ContainedButton>
         </div>
       </div>
+      <img
+        className="CreatePost__waves"
+        alt="Animated Waves"
+        src={WaveBackground}
+      ></img>
     </form>
   );
 }
