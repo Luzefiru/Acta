@@ -1,6 +1,6 @@
 /* firebase.config.js */
 import { initializeApp } from 'firebase/app';
-import { getAuth, connectAuthEmulator } from 'firebase/auth';
+import { getAuth } from 'firebase/auth';
 import { getPerformance } from 'firebase/performance';
 
 const firebaseConfig = {
@@ -16,9 +16,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Initialize Firebase Auth service
 const auth = getAuth(app);
-
-// Initialize Emulators for development purposes, run with: firebase emulators:start
-connectAuthEmulator(auth, 'http://localhost:9099');
 
 // Initialize performance analytics
 getPerformance(app);
