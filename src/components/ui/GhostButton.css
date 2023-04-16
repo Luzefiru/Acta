@@ -3,12 +3,15 @@
   padding: 8px 16px;
   border-radius: 8px;
   background-color: var(--white);
-  color: var(--primary);
+  color: var(--destructive);
   font-weight: 500;
-  border: 1px solid var(--primary-alt);
+  border: 1.5px solid var(--destructive);
+  transition: all 40ms ease-in;
 }
 
 .ghostButton:hover {
   cursor: pointer;
-  background-color: var(--surface-alt);
+  color: var(--white);
+  font-weight: 600;
+  background-color: var(--destructive);
 }
