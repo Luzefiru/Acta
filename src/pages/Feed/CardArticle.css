@@ -43,7 +43,7 @@
 
 @media only screen and (max-width: 768px) {
   .CardArticle {
-    height: 20lvh;
+    height: fit-content;
   }
 
   .CardArticle__details {
