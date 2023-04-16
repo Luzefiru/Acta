@@ -22,7 +22,7 @@ function App() {
         <div className="App--wrapper">
           {/* This div wrapper used to give padding to page content */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Auth />} />
             <Route path="/auth" element={<Auth />}>
               <Route index element={<SignUp />} />
               <Route path="login" element={<LogIn />} />
