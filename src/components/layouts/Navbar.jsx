@@ -3,6 +3,8 @@ import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
 import Logo from './Logo';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { auth } from '../../utils/firebase.config';
+import { signOut } from 'firebase/auth';
 
 const Navbar = () => {
   const expandNavbar = () => {
@@ -155,7 +157,13 @@ var expandedNavItems = (
       </svg>
       Profile
     </Link>
-    <Link className="Link--logout" to="/">
+    <Link
+      onClick={() => {
+        signOut(auth);
+      }}
+      className="Link--logout"
+      to="/"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="22"

@@ -19,11 +19,9 @@ const Logo = (props) => {
     <div
       className="Logo"
       onMouseEnter={() => {
-        console.log('true');
         setCurrentColor(hoverColor);
       }}
       onMouseLeave={() => {
-        console.log('false');
         setCurrentColor(color);
       }}
     >

@@ -4,7 +4,7 @@ function TextField(props) {
   const { className, label, id, placeholder } = props;
   return (
     <div className={`TextField ${className}`}>
-      <label className="TextField__label" for={id}>
+      <label className="TextField__label" htmlFor={id}>
         {label}
       </label>
       <input

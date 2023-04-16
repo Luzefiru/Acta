@@ -10,11 +10,11 @@ function Home() {
         <img
           src={HeroIllustration}
           alt="Bloggers Creating a Page"
-          class="Home__hero__img"
+          className="Home__hero__img"
         />
-        <div class="Home__hero__headline">
+        <div className="Home__hero__headline">
           Empower Your Blogging Journey with Acta
-          <div class="Home__hero__headline__subtext">
+          <div className="Home__hero__headline__subtext">
             So what are you waiting for? Sign up for Acta today and start
             sharing your ideas with the world! It's quick, easy, and completely
             free - and who knows where it could take you?
