@@ -11,10 +11,12 @@ Run this command to clone the repository into the current directory and `git pul
 ```bash
 # clones the remote repo into your machine
 git clone git@github.com:Luzefiru/blog-project.git
+# change current working directory to the project
+cd blog-project
 # gets the newest version of the remote repo
 git pull
-# open the project directory in your text editor of choice
-code ./blog-project
+# open the current directory in your preferred text editor
+code .
 ```
 
 Once that's done, you'll have to install the `node_modules` dependencies via this command:
