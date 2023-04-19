@@ -8,7 +8,34 @@ const filterPosts = (() => {
    * @returns an array containing AT LEAST all the  arrayOfTags
    */
   const byTag = (arrayOfPosts, arrayOfTags) => {
-    return [];
+    
+    const returned = [];
+    var count = 0;
+
+    if(arrayOfTags.length === 0){
+      return arrayOfPosts;
+    }
+    else{
+    arrayOfPosts.forEach( (Post) => {
+      count = 0;
+      Post.tags.forEach( (Tag) => {
+       arrayOfTags.forEach( (SearchTag) => {
+        if(SearchTag === Tag){
+          count++;
+        }
+       });
+      }); 
+    if(count === arrayOfTags.length){
+      returned.push(Post); 
+    }
+    } );
+   }
+   if(returned.length === 0){
+    return null;
+   }
+   else{
+    return returned;
+   }
   };
 
   return { byTag };
