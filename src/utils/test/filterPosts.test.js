@@ -21,7 +21,7 @@ describe('The filterPosts module', () => {
     expect(filterPosts.byTag(sampleData, ['Technology'])).toEqual(sampleData);
   });
 
-  it.only('should return the post with {postID} "0000003" if we filter by "News"', () => {
+  it('should return the post with {postID} "0000003" if we filter by "News"', () => {
     expect(filterPosts.byTag(sampleData, ['News'])).toEqual([sampleData[2]]);
   });
 
