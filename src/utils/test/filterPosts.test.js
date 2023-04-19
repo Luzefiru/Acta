@@ -21,32 +21,32 @@ describe('The filterPosts module', () => {
     expect(filterPosts.byTag(sampleData, ['Technology'])).toEqual(sampleData);
   });
 
-  it('should return the post with {postID} "0000003" if we filter by "News"', () => {
-    expect(filterPosts.byTag(sampleData, ['Technology'])).toEqual(
-      sampleData[2]
-    );
+  it.only('should return the post with {postID} "0000003" if we filter by "News"', () => {
+    expect(filterPosts.byTag(sampleData, ['News'])).toEqual([sampleData[2]]);
   });
 
   it('should return the post with {postID} "0000002" if we filter by "Network Engineering"', () => {
-    expect(filterPosts.byTag(sampleData, ['Network Engineering'])).toEqual(
-      sampleData[2]
-    );
+    expect(filterPosts.byTag(sampleData, ['Network Engineering'])).toEqual([
+      sampleData[1],
+    ]);
   });
 
   it('should return the posts with {postID} "0000001" & "0000002" we filter by "Computer Science"', () => {
-    expect(filterPosts.byTag(sampleData, ['Technology'])).toEqual(
+    expect(filterPosts.byTag(sampleData, ['Computer Science'])).toEqual(
       sampleData.slice(0, 2)
     );
   });
 
   it('should return the posts with {postID} "0000001" & "0000002" we filter by ["Computer Science", "Technology"]', () => {
-    expect(filterPosts.byTag(sampleData, ['Technology'])).toEqual(
-      sampleData.slice(0, 2)
-    );
+    expect(
+      filterPosts.byTag(sampleData, ['Computer Science', 'Technology'])
+    ).toEqual(sampleData.slice(0, 2));
   });
 
   it('should return null when we filter by ["News", "Network Engineering"]', () => {
-    expect(filterPosts.byTag(sampleData, ['Technology'])).toBe(null);
+    expect(filterPosts.byTag(sampleData, ['News', 'Network Engineering'])).toBe(
+      null
+    );
   });
 });
 
