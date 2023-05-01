@@ -4,7 +4,7 @@ const instance = require("../models");
 
 /*THE FOLLOWING ARE THE CODE TO EXECUTE DB QUERIES ON THE DIFFERENT USER CREATED TASKS*/
 
-exports.createPost = async (req, res) => {
+exports.handleCreatePost = async (req, res) => {
   console.log("Creating Post");
 
   let ret = await instance.Post.create({
@@ -25,51 +25,47 @@ exports.displayPosts = async (req, res) => {
   console.log("Displaying All Posts");
 
   let ret = await instance.Post.findAll();
+
+  res.status(201).send(ret);
+};
+
+exports.displayPosts = async (req, res) => {
+  console.log("Displaying All Posts");
+
+  let ret = await instance.Post.findOne({
+    where: { id: req.params.id },
+  });
+
   console.log(ret);
   res.status(201).send(ret);
 };
 
-// exports.displayTask = async (req, res) => {
-//   console.log("Displaying Task");
+exports.deletePost = async (req, res) => {
+  console.log("Deleting Post");
 
-//   let ret = await instance.Task.findOne({
-//     where: { id: req.params.id },
-//   });
+  let ret = await instance.Post.destroy({
+    where: { id: req.params.id },
+    truncate: true,
+  });
 
-//   console.log(ret);
-//   res.status(201).send(ret);
-// };
+  console.log(ret);
+  res.status(200).json({
+    status: "success",
+    data: null,
+  });
+};
 
-// exports.deleteTask = async (req, res) => {
-//   console.log("Deleting Tasks");
+exports.deleteAllPosts = async (req, res) => {
+  console.log("Deleting All Posts");
 
-//   let row = await instance.Task.findOne({
-//     where: { id: req.params.id },
-//   });
+  let ret = await instance.Post.destroy({
+    where: {},
+    truncate: true,
+  });
 
-//   let ret = await instance.Task.destroy({
-//     where: { id: req.params.id },
-//     truncate: true,
-//   });
-
-//   console.log(ret);
-//   res.status(200).json({
-//     status: "success",
-//     data: null,
-//   });
-// };
-
-// exports.deleteAllTasks = async (req, res) => {
-//   console.log("Deleting All Tasks");
-
-//   let ret = await instance.Task.destroy({
-//     where: {},
-//     truncate: true,
-//   });
-
-//   console.log(ret);
-//   res.status(200).json({
-//     status: "success",
-//     data: null,
-//   });
-// };
+  console.log(ret);
+  res.status(200).json({
+    status: "success",
+    data: null,
+  });
+};

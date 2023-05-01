@@ -7,7 +7,7 @@ const router = express.Router();
 
 router
   .route("/")
-  .post(postController.createPost)
+  .post(postController.handleCreatePost)
   .get(postController.displayPosts);
 
 module.exports = router;
