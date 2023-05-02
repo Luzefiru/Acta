@@ -43,11 +43,19 @@
 
 @media only screen and (max-width: 768px) {
   .CardArticle {
-    height: 20lvh;
+    height: fit-content;
+    flex-direction: column;
   }
 
   .CardArticle__details {
     padding: 16px;
+  }
+
+  .CardArticle__img {
+    width: 100%;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 16px;
+    height: clamp(100px, 20lvw, 8rem);
   }
 
   .CardArticle__details__description {
