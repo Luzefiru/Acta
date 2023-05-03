@@ -1,0 +1,85 @@
+.CreatePost {
+  display: grid;
+  align-items: center;
+  gap: 32px;
+}
+
+.CreatePost__fieldset {
+  all: unset;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.CreatePost__card {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: var(--border);
+  gap: 32px;
+  border-radius: 8px;
+}
+
+.CreatePost__articleDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CreatePost__articleDetails > svg {
+  color: var(--icon);
+  font-size: min(3lvw, 0.8rem);
+  font-weight: 600;
+  display: flex;
+  gap: 2px;
+  cursor: pointer;
+  align-items: center;
+}
+
+.CreatePost__articleDetails > svg:hover {
+  color: var(--icon-hover);
+}
+
+.CreatePost__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.CreatePost__addedTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.CreatePost__addTag-btn {
+  all: unset;
+  color: var(--primary);
+  text-indent: 16px;
+}
+
+.CreatePost__addTag-btn:hover {
+  cursor: pointer;
+  color: var(--primary-alt);
+}
+
+.CreatePost__mainButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.CreatePost__waves {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  .CreatePost__card {
+    padding: 4lvw;
+  }
+}
