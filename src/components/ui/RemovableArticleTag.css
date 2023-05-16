@@ -1,0 +1,14 @@
+.RemovableArticleTag {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: min(2.3vw, 0.75rem);
+  padding: 8px;
+  color: var(--tag-text);
+  background-color: var(--tag-bg);
+  border-radius: 8px;
+  cursor: pointer;
+}

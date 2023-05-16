@@ -1,4 +1,4 @@
-# blog-project
+# Acta
 
 A full stack single-page blog application with CRUD capabilities & user authentication.
 
