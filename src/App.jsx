@@ -36,7 +36,7 @@ function App() {
     if (user !== null) {
       toast.success('You are signed in.', {
         position: 'bottom-right',
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -48,7 +48,7 @@ function App() {
     } else {
       toast.error('You are currently signed out.', {
         position: 'bottom-right',
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
