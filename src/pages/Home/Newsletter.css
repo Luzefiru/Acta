@@ -55,7 +55,8 @@
   color: var(--white);
   font-weight: 500;
   cursor: pointer;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+  font-family: 'Roboto', sans-serif;
 }
 
 .Newsletter__input__button:hover {
