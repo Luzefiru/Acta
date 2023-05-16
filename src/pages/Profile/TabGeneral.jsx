@@ -2,7 +2,9 @@ import './TabGeneral.css';
 import TextField from '../../components/forms/TextField';
 import TextArea from '../../components/forms/TextArea';
 import ContainedButton from '../../components/ui/ContainedButton';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { db } from '../../utils/firebase.config';
+import { getDoc, setDoc, doc } from 'firebase/firestore';
 
 function TabGeneral({ user }) {
   const [fname, setFname] = useState('');
@@ -12,6 +14,30 @@ function TabGeneral({ user }) {
   const handleChange = (e, setFn) => {
     setFn(e.target.value);
   };
+
+  async function getData() {
+    const docPath = doc(db, 'users', user.uid);
+    const snapshot = await getDoc(docPath);
+
+    if (snapshot.exists()) {
+      console.log('Exists', snapshot.data());
+      setFname(snapshot.data().fname);
+      setDname(snapshot.data().dname);
+      setBio(snapshot.data().bio);
+    } else {
+      console.log('no doc');
+      setData(user.uid, { fname, dname, bio }).then(() => {
+        console.log('data set');
+      });
+    }
+  }
+
+  async function setData(userID, state) {
+    console.log('Setting', state);
+    await setDoc(doc(db, `users/${userID}`), state);
+  }
+
+  getData();
 
   return (
     <form className="TabGeneral">
@@ -61,7 +87,10 @@ function TabGeneral({ user }) {
           placeholder="●●●●●●●●"
         />
       </fieldset>
-      <div className="TabGeneral__btn--wrapper">
+      <div
+        className="TabGeneral__btn--wrapper"
+        onClick={() => setData(user.uid, { fname, dname, bio })}
+      >
         <ContainedButton
           padding="12px 16px"
           className="TabGeneral__btn--submit"

@@ -13,6 +13,7 @@ function ContainedButton(props) {
     <button
       style={{ fontSize, width, padding, fontWeight }}
       className={`ContainedButton ${className}`}
+      type="button"
     >
       {props.children}
     </button>
