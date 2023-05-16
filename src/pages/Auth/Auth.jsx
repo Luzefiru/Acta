@@ -8,7 +8,7 @@ function Auth({ user }) {
   useEffect(() => {
     if (user !== null) {
       console.log('Successfully signed in: ', user);
-      navigate(`/profile/${user.uid}`, { replace: true });
+      navigate('/feed', { replace: true });
     } else {
       navigate('/auth', { replace: true });
     }
