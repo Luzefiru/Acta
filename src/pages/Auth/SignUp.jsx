@@ -35,18 +35,14 @@ const signUpWithGithubPopup = async () => {
 function SignUp() {
   return (
     <div class="SignUp">
-      <h1>Create an account</h1>
-      <AuthTextField label="Full Name" placeholder="John Doe" />
+      <h1>Sign In</h1>
+      {/* <AuthTextField label="Full Name" placeholder="John Doe" /> */}
       <AuthTextField
         type="email"
         label="Email"
         placeholder="example.email@gmail.com"
       />
-      <AuthTextField
-        type="password"
-        label="Password"
-        placeholder="Enter at least 8+ characters"
-      />
+      <AuthTextField type="password" label="Password" placeholder="●●●●●●●●" />
       <button type="submit" class="SignUp__submit-btn">
         Sign up
       </button>
