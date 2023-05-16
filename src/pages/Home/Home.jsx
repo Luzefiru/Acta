@@ -31,7 +31,7 @@ function Home() {
         <FeatureCard content="Read latest news and articles" number="#1" />
         <FeatureCard content="Post creation and sharing" number="#2" />
         <FeatureCard content="Numerous article tag options" number="#3" />
-        <FeatureCard content="Interactive profiles" number="#4" />
+        <FeatureCard content="Interactive user profiles" number="#4" />
       </div>
     </div>
   );

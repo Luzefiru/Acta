@@ -10,7 +10,6 @@
   box-shadow: 0 2px 8px rgba(112, 112, 112, 0.6);
   color: var(--white);
   justify-content: space-between;
-  font-family: 'Space Grotesk', sans-serif;
   transition: 80ms ease-out;
 }
 
@@ -21,6 +20,7 @@
 .FeatureCard h1 {
   font-size: 6rem;
   align-self: flex-end;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .FeatureCard h3 {
