@@ -70,6 +70,10 @@
   gap: 1rem;
 }
 
+.CreatePost__mainButtons a {
+  text-decoration: none;
+}
+
 .CreatePost__waves {
   position: absolute;
   left: 0;

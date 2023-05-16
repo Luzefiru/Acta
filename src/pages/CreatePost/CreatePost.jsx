@@ -1,10 +1,11 @@
-import "./CreatePost.css";
-import AddedTags from "./AddedTags";
-import TextField from "../../components/forms/TextField";
-import TextArea from "../../components/forms/TextArea";
-import GhostButton from "../../components/ui/GhostButton";
-import ContainedButton from "../../components/ui/ContainedButton";
-import WaveBackground from "../../assets/waves-slower.svg";
+import './CreatePost.css';
+import AddedTags from './AddedTags';
+import TextField from '../../components/forms/TextField';
+import TextArea from '../../components/forms/TextArea';
+import GhostButton from '../../components/ui/GhostButton';
+import ContainedButton from '../../components/ui/ContainedButton';
+import WaveBackground from '../../assets/waves-slower.svg';
+import { Link } from 'react-router-dom';
 
 function CreatePost() {
   return (
@@ -51,7 +52,9 @@ function CreatePost() {
           <button className="CreatePost__addTag-btn">+ Add another tag</button>
         </div>
         <div className="CreatePost__mainButtons">
-          <GhostButton content="Cancel" />
+          <Link to="/feed">
+            <GhostButton content="Cancel" />
+          </Link>
           <ContainedButton>Post</ContainedButton>
         </div>
       </div>
