@@ -110,12 +110,23 @@ nav a:hover {
 }
 
 .Link--logout,
-.Link--logout:hover {
-  margin-top: auto;
+.Link--logout.desktop:hover {
   color: var(--destructive);
 }
 
+.Link--logout.desktop {
+  color: var(--icon);
+}
+
+.hidden {
+  display: hidden;
+}
+
 @media only screen and (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
   .expandedNavItems {
     display: flex;
     gap: 16px;
@@ -165,6 +176,11 @@ nav a:hover {
     top: 0px;
     right: 0px;
     z-index: 999;
+  }
+
+  .Link--logout,
+  .Link--logout:hover {
+    margin-top: auto;
   }
 
   .Navbar.expanded .Navbar__profile-photo {

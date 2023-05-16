@@ -1,10 +1,10 @@
 import './ClipboardField.css';
 
-function ClipboardField() {
+function ClipboardField({ user }) {
   return (
     <div className="ClipboardField">
       <span className="ClipboardField__text">
-        acta.com/profile/19asnca12038shfd4
+        {`acta.com/profile/${user.uid}`}
       </span>
       <div
         className="ClipboardField__clipboard"

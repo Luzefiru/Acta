@@ -1,8 +1,19 @@
 import './Auth.css';
-import { Outlet } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
 import WaveBackground from '../../assets/waves.svg';
 
-function Auth() {
+function Auth({ user }) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (user !== null) {
+      console.log('Successfully signed in: ', user);
+      navigate(`/profile/${user.uid}`, { replace: true });
+    } else {
+      navigate('/auth', { replace: true });
+    }
+  }, [navigate, user]);
+
   return (
     <div className="Auth">
       <Outlet />

@@ -32,7 +32,8 @@
 
 .SignUp__alternative {
   text-align: center;
-  margin-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 16px;
   color: var(--tab-header);
 }
 
@@ -41,7 +42,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .SignUp button img {

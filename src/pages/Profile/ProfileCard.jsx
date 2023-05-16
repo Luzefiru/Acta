@@ -2,13 +2,13 @@ import './ProfileCard.css';
 import ProfilePicturePlaceholder from '../../assets/profile-picture.jpg';
 import ClipboardField from './ClipboardField';
 
-function ProfileCard() {
+function ProfileCard({ user }) {
   return (
     <div className="ProfileCard">
       <img
         className="ProfileCard__img"
         alt="User Profile"
-        src={ProfilePicturePlaceholder}
+        src={user.photoURL !== null ? user.photoURL : ProfilePicturePlaceholder}
       ></img>
       <div className="ProfileCard__edit-btn">
         <svg
@@ -34,7 +34,7 @@ function ProfileCard() {
       </div>
       <hr />
       <div className="ProfileCard__link">Profile Link</div>
-      <ClipboardField />
+      <ClipboardField user={user} />
     </div>
   );
 }

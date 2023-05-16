@@ -6,7 +6,7 @@ const AuthTextField = (props) => {
   return (
     <div class="AuthTextField">
       <p class="AuthTextField__label">{label}</p>
-      <input type={type} placeholder={placeholder} />
+      <input disabled type={type} placeholder={placeholder} />
     </div>
   );
 };
