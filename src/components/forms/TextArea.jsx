@@ -4,7 +4,7 @@ function TextArea(props) {
   const { className, label, id, placeholder } = props;
   return (
     <div className={`TextArea ${className}`}>
-      <label className="TextArea__label" for={id}>
+      <label className="TextArea__label" htmlFor={id}>
         {label}
       </label>
       <textarea
