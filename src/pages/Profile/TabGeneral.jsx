@@ -2,8 +2,17 @@ import './TabGeneral.css';
 import TextField from '../../components/forms/TextField';
 import TextArea from '../../components/forms/TextArea';
 import ContainedButton from '../../components/ui/ContainedButton';
+import { useState, useEffect } from 'react';
 
 function TabGeneral({ user }) {
+  const [fname, setFname] = useState('');
+  const [dname, setDname] = useState('');
+  const [bio, setBio] = useState('');
+
+  const handleChange = (e, setFn) => {
+    setFn(e.target.value);
+  };
+
   return (
     <form className="TabGeneral">
       <h2 className="TabGeneral__header">Identification</h2>
@@ -13,18 +22,24 @@ function TabGeneral({ user }) {
           id="fullName"
           label="Full Name"
           placeholder="Your full name"
+          value={fname}
+          onChange={(e) => handleChange(e, setFname)}
         />
         <TextField
           className="TabGeneral__fieldset__displayName"
           id="displayName"
           label="Display Name"
           placeholder="Your display name"
+          value={dname}
+          onChange={(e) => handleChange(e, setDname)}
         />
         <TextArea
           className="TabGeneral__fieldset__bio"
           id="bio"
           label="Bio"
           placeholder="Say something about yourself"
+          value={bio}
+          onChange={(e) => handleChange(e, setBio)}
         />
       </fieldset>
 

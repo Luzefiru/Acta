@@ -2,6 +2,7 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, connectAuthEmulator } from 'firebase/auth';
 import { getPerformance } from 'firebase/performance';
+import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBPxPQQ8Vh4K9V-eSnCbsxHKZdJGJZD5FI',
@@ -16,11 +17,14 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // Initialize Firebase Auth service
 const auth = getAuth(app);
+// Initialize Firebase Firestore
+const db = getFirestore(app);
 
 // Initialize Emulators for development purposes, run with: firebase emulators:start
 connectAuthEmulator(auth, 'http://localhost:9099');
+connectFirestoreEmulator(db, 'localhost', 8080);
 
 // Initialize performance analytics
 getPerformance(app);
 
-export { app, auth };
+export { app, auth, db };
