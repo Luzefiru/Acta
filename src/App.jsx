@@ -5,6 +5,7 @@ import { HashRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { MutatingDots } from 'react-loader-spinner';
 /* JSX component imports */
 import Navbar from './components/layouts/Navbar.jsx';
 import Footer from './components/layouts/Footer.jsx';
@@ -23,6 +24,7 @@ import { auth } from './utils/firebase.config';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   onAuthStateChanged(auth, (authUser) => {
     if (authUser !== null) {
@@ -31,6 +33,12 @@ function App() {
       setUser(null);
     }
   });
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+  }, []);
 
   useEffect(() => {
     if (user !== null) {
@@ -62,24 +70,42 @@ function App() {
 
   return (
     <div className="App">
-      <HashRouter>
-        <Navbar user={user} />
-        <div className="App--wrapper">
-          {/* This div wrapper used to give padding to page content */}
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/auth" element={<Auth user={user} />}>
-              <Route index element={<SignUp />} />
-              <Route path="login" element={<LogIn />} />
-            </Route>
-            <Route path="/feed" element={<Feed />} />
-            <Route path="/create-post" element={<CreatePost />} />
-            <Route path="/post/:postID" element={<Post />} />
-            <Route path="/profile/:userID" element={<Profile user={user} />} />
-          </Routes>
-        </div>
-        <Footer />
-      </HashRouter>
+      {isLoading ? (
+        <MutatingDots
+          height="100"
+          width="100"
+          color="#333335"
+          secondaryColor="#333335"
+          radius="13.5"
+          ariaLabel="mutating-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass="MutatingDots"
+          visible={true}
+        />
+      ) : (
+        <HashRouter>
+          <Navbar user={user} />
+          <div className="App--wrapper">
+            {/* This div wrapper used to give padding to page content */}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/auth" element={<Auth user={user} />}>
+                <Route index element={<SignUp />} />
+                <Route path="login" element={<LogIn />} />
+              </Route>
+              <Route path="/feed" element={<Feed />} />
+              <Route path="/create-post" element={<CreatePost />} />
+              <Route path="/post/:postID" element={<Post />} />
+              <Route
+                path="/profile/:userID"
+                element={<Profile user={user} />}
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </HashRouter>
+      )}
+
       <ToastContainer
         position="bottom-right"
         autoClose={5000}
