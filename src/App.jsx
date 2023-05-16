@@ -1,7 +1,7 @@
 /* stylesheet import */
 import './App.css';
 /* library imports */
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 /* JSX component imports */
 import Navbar from './components/layouts/Navbar.jsx';
 import Footer from './components/layouts/Footer.jsx';
@@ -17,7 +17,7 @@ import Profile from './pages/Profile/Profile.jsx';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar />
         <div className="App--wrapper">
           {/* This div wrapper used to give padding to page content */}
@@ -34,7 +34,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
