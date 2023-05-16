@@ -1,6 +1,14 @@
 import './TextField.css';
 
-function TextField({ className, label, id, placeholder, value, onChange }) {
+function TextField({
+  className,
+  label,
+  id,
+  placeholder,
+  value,
+  onChange,
+  disabled = false,
+}) {
   return (
     <div className={`TextField ${className}`}>
       <label className="TextField__label" htmlFor={id}>
@@ -14,6 +22,7 @@ function TextField({ className, label, id, placeholder, value, onChange }) {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        disabled={disabled}
       ></input>
     </div>
   );

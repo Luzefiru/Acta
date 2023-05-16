@@ -2,42 +2,44 @@ import './TabGeneral.css';
 import TextField from '../../components/forms/TextField';
 import TextArea from '../../components/forms/TextArea';
 import ContainedButton from '../../components/ui/ContainedButton';
-import { useState } from 'react';
 import { db } from '../../utils/firebase.config';
 import { getDoc, setDoc, doc } from 'firebase/firestore';
+import { useEffect } from 'react';
 
-function TabGeneral({ user }) {
-  const [fname, setFname] = useState('');
-  const [dname, setDname] = useState('');
-  const [bio, setBio] = useState('');
-
-  const handleChange = (e, setFn) => {
-    setFn(e.target.value);
-  };
-
-  async function getData() {
-    const docPath = doc(db, 'users', user.uid);
-    const snapshot = await getDoc(docPath);
-
-    if (snapshot.exists()) {
-      console.log('Exists', snapshot.data());
-      setFname(snapshot.data().fname);
-      setDname(snapshot.data().dname);
-      setBio(snapshot.data().bio);
-    } else {
-      console.log('no doc');
-      setData(user.uid, { fname, dname, bio }).then(() => {
-        console.log('data set');
-      });
-    }
-  }
-
+function TabGeneral({
+  user,
+  fname,
+  setFname,
+  dname,
+  setDname,
+  bio,
+  setBio,
+  handleChange,
+}) {
   async function setData(userID, state) {
     console.log('Setting', state);
     await setDoc(doc(db, `users/${userID}`), state);
   }
 
-  getData();
+  useEffect(() => {
+    async function getData() {
+      const docPath = doc(db, 'users', user.uid);
+      const snapshot = await getDoc(docPath);
+
+      if (snapshot.exists()) {
+        console.log('Exists', snapshot.data());
+        setFname(snapshot.data().fname);
+        setDname(snapshot.data().dname);
+        setBio(snapshot.data().bio);
+      } else {
+        console.log('no doc');
+        setData(user.uid, { fname, dname, bio }).then(() => {
+          console.log('data set');
+        });
+      }
+    }
+    getData();
+  }, []);
 
   return (
     <form className="TabGeneral">
@@ -79,12 +81,14 @@ function TabGeneral({ user }) {
           label="Email"
           placeholder="example.email@gmail.com"
           value={user.email}
+          disabled={true}
         />
         <TextField
           className="TabGeneral__fieldset__password"
           id="password"
           label="Password"
           placeholder="●●●●●●●●"
+          disabled={true}
         />
       </fieldset>
       <div
