@@ -18,11 +18,11 @@
   box-shadow: 0 4px 24px rgba(112, 112, 112, 0.3);
 }
 
-h1 {
+.FeatureCard h1 {
   font-size: 6rem;
   align-self: flex-end;
 }
 
-h3 {
+.FeatureCard h3 {
   color: var(--white);
 }
