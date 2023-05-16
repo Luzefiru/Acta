@@ -49,3 +49,20 @@
     width: 100%;
   }
 }
+
+.Home__hero,
+.Newsletter {
+  animation: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) fly-in;
+}
+
+@keyframes fly-in {
+  from {
+    opacity: 0;
+    transform: translateY(40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
