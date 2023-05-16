@@ -28,8 +28,8 @@
 .Home__hero__headline__subtext {
   width: 80%;
   line-height: 1.5;
-  font-size: clamp(0.9rem, 1vw, 1.5rem);
-  font-weight: 500;
+  font-size: clamp(0.8rem, 1.2vw, 1.5rem);
+  font-weight: 400;
   color: var(--subtext);
 }
 
@@ -43,5 +43,9 @@
   }
   .Home__hero__img {
     margin-top: 48px;
+  }
+
+  .Home__hero__headline__subtext {
+    width: 100%;
   }
 }

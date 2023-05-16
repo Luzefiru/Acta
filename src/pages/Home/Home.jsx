@@ -20,7 +20,7 @@ function Home() {
             free - and who knows where it could take you?
           </div>
           <Link to="/auth">
-            <ContainedButton padding="14px 24px">Sign Up Now</ContainedButton>
+            <ContainedButton padding="14px 24px">Sign up Now</ContainedButton>
           </Link>
         </div>
       </main>
