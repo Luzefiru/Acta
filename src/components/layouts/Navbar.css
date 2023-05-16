@@ -110,8 +110,12 @@ nav a:hover {
 }
 
 .Link--logout,
-.Link--logout:hover {
+.Link--logout.desktop:hover {
   color: var(--destructive);
+}
+
+.Link--logout.desktop {
+  color: var(--icon);
 }
 
 .hidden {

@@ -3,7 +3,7 @@ import TextField from '../../components/forms/TextField';
 import TextArea from '../../components/forms/TextArea';
 import ContainedButton from '../../components/ui/ContainedButton';
 
-function TabGeneral() {
+function TabGeneral({ user }) {
   return (
     <form className="TabGeneral">
       <h2 className="TabGeneral__header">Identification</h2>
@@ -37,6 +37,7 @@ function TabGeneral() {
           id="email"
           label="Email"
           placeholder="example.email@gmail.com"
+          value={user.email}
         />
         <TextField
           className="TabGeneral__fieldset__password"

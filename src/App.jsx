@@ -45,7 +45,7 @@ function App() {
             <Route path="/feed" element={<Feed />} />
             <Route path="/create-post" element={<CreatePost />} />
             <Route path="/post/:postID" element={<Post />} />
-            <Route path="/profile/:userID" element={<Profile />} />
+            <Route path="/profile/:userID" element={<Profile user={user} />} />
           </Routes>
         </div>
         <Footer />

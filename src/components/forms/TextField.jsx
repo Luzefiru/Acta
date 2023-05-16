@@ -1,7 +1,7 @@
 import './TextField.css';
 
 function TextField(props) {
-  const { className, label, id, placeholder } = props;
+  const { className, label, id, placeholder, value } = props;
   return (
     <div className={`TextField ${className}`}>
       <label className="TextField__label" htmlFor={id}>
@@ -13,6 +13,7 @@ function TextField(props) {
         name={id}
         id={id}
         placeholder={placeholder}
+        value={value}
       ></input>
     </div>
   );

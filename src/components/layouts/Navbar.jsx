@@ -34,7 +34,7 @@ const Navbar = ({ user }) => {
         <Logo color="var(--icon)" hoverColor="var(--icon-hover)" />
       </Link>
 
-      {user !== null ? displayNav(expandedNavItems) : ''}
+      {user !== null ? displayNav(expandedNavItems, user) : ''}
 
       <button
         className="Navbar__nav-expand-button lucide lucide-menu"
@@ -62,7 +62,7 @@ const Navbar = ({ user }) => {
 
 export default Navbar;
 
-function displayNav(expandedNavItems) {
+function displayNav(expandedNavItems, user) {
   return (
     <nav className="Navbar__links">
       <Link to="/create-post">
@@ -104,19 +104,6 @@ function displayNav(expandedNavItems) {
           <path d="M10 6h8v4h-8V6Z"></path>
         </svg>
       </Link>
-      <Link className="Navbar__profile-photo" to="/profile/test">
-        <img
-          className="Navbar__profile-photo__img"
-          alt="User Profile"
-          src={ProfilePicturePlaceholder}
-        ></img>
-        <span className="Navbar__profile-photo__userName">
-          <div>John Doe</div>
-          <div className="Navbar__profile-photo__userName__viewProfile">
-            View Profile
-          </div>
-        </span>
-      </Link>
       <Link
         onClick={() => {
           signOut(auth);
@@ -141,6 +128,22 @@ function displayNav(expandedNavItems) {
           <line x1="21" x2="9" y1="12" y2="12"></line>
         </svg>
       </Link>
+      <Link className="Navbar__profile-photo" to="/profile/test">
+        <img
+          className="Navbar__profile-photo__img"
+          alt="User Profile"
+          src={
+            user.photoURL !== null ? user.photoURL : ProfilePicturePlaceholder
+          }
+        ></img>
+        <span className="Navbar__profile-photo__userName">
+          <div>John Doe</div>
+          <div className="Navbar__profile-photo__userName__viewProfile">
+            View Profile
+          </div>
+        </span>
+      </Link>
+
       {expandedNavItems}
     </nav>
   );
