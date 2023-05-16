@@ -5,6 +5,7 @@ import ContainedButton from '../../components/ui/ContainedButton';
 import { db } from '../../utils/firebase.config';
 import { getDoc, setDoc, doc } from 'firebase/firestore';
 import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 function TabGeneral({
   user,
@@ -56,8 +57,8 @@ function TabGeneral({
         <TextField
           className="TabGeneral__fieldset__displayName"
           id="displayName"
-          label="Display Name"
-          placeholder="Your display name"
+          label="Professional Title"
+          placeholder="Your professional title"
           value={dname}
           onChange={(e) => handleChange(e, setDname)}
         />
@@ -93,7 +94,20 @@ function TabGeneral({
       </fieldset>
       <div
         className="TabGeneral__btn--wrapper"
-        onClick={() => setData(user.uid, { fname, dname, bio })}
+        onClick={async () => {
+          await setData(user.uid, { fname, dname, bio });
+          toast.success('User information saved.', {
+            position: 'bottom-right',
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: 'light',
+            toastId: 'signin',
+          });
+        }}
       >
         <ContainedButton
           padding="12px 16px"
