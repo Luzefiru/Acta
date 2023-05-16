@@ -34,7 +34,7 @@ function App() {
 
   useEffect(() => {
     if (user !== null) {
-      toast.success('Signed in successfully', {
+      toast.success('You are signed in.', {
         position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: false,
@@ -46,7 +46,7 @@ function App() {
         toastId: 'signin',
       });
     } else {
-      toast.error('You are now signed out', {
+      toast.error('You are currenty signed out.', {
         position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: false,
@@ -55,6 +55,7 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: 'light',
+        toastId: 'signout',
       });
     }
   }, [user]);
