@@ -1,0 +1,28 @@
+.FeatureCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: linear-gradient(45deg, var(--primary-alt), var(--primary));
+  padding: 16px 10px 16px 16px;
+  border-radius: 8px;
+  width: 12rem;
+  height: 12rem;
+  box-shadow: 0 2px 8px rgba(112, 112, 112, 0.6);
+  color: var(--white);
+  justify-content: space-between;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: 80ms ease-out;
+}
+
+.FeatureCard:hover {
+  box-shadow: 0 4px 24px rgba(112, 112, 112, 0.3);
+}
+
+h1 {
+  font-size: 6rem;
+  align-self: flex-end;
+}
+
+h3 {
+  color: var(--white);
+}

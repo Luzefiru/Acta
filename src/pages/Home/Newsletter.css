@@ -4,14 +4,14 @@
 }
 
 .Newsletter--wrapper {
-  background: linear-gradient(135deg, var(--primary-alt), var(--primary));
-  margin-top: 128px;
-  padding: 32px;
+  background: var(--black);
+  padding: 64px 32px;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   align-items: center;
-  width: 70%;
+  width: 75%;
+  margin: 16px 0;
 }
 
 .Newsletter__heading {

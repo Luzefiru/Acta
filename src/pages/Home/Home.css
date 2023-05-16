@@ -1,3 +1,9 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
 .Home__hero {
   margin-top: 48px;
   display: grid;
@@ -51,7 +57,8 @@
 }
 
 .Home__hero,
-.Newsletter {
+.Newsletter,
+.FeatureCard {
   animation: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86) fly-in;
 }
 
@@ -65,4 +72,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.Home__feature__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
+  align-items: center;
+  justify-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 72px;
 }
