@@ -1,7 +1,8 @@
-import './Home.css';
-import HeroIllustration from '../../assets/hero-illustration.svg';
-import ContainedButton from '../../components/ui/ContainedButton';
-import { Link } from 'react-router-dom';
+import "./Home.css";
+import HeroIllustration from "../../assets/hero-illustration.svg";
+import ContainedButton from "../../components/ui/ContainedButton";
+import FeatureCard from "./FeatureCard";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -24,6 +25,12 @@ function Home() {
           </Link>
         </div>
       </main>
+      <div className="Home__feature__cards">
+        <FeatureCard content="Read latest news and articles" number="#1" />
+        <FeatureCard content="Post creation and sharing" number="#2" />
+        <FeatureCard content="Numerous article tag options" number="#3" />
+        <FeatureCard content="Interactive profiles" number="#4" />
+      </div>
     </div>
   );
 }

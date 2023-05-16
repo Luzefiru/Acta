@@ -1,3 +1,9 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
 .Home__hero {
   margin-top: 48px;
   display: grid;
@@ -44,4 +50,14 @@
   .Home__hero__img {
     margin-top: 48px;
   }
+}
+
+.Home__feature__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));  
+  align-items: center;
+  justify-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 72px;
 }

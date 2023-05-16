@@ -1,0 +1,23 @@
+.FeatureCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: black;
+  padding: 16px 10px 16px 16px;
+  border-radius: 8px;
+  width: 12rem;
+  height: 12rem;
+  box-shadow: 0 0 8px rgb(30, 30, 30);
+  color: white;
+  justify-content: space-between;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  align-self: flex-end;
+}
+
+h3 {
+  color: var(--surface-alt);
+}
