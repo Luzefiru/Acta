@@ -46,7 +46,7 @@ function App() {
         toastId: 'signin',
       });
     } else {
-      toast.error('You are currenty signed out.', {
+      toast.error('You are currently signed out.', {
         position: 'bottom-right',
         autoClose: 5000,
         hideProgressBar: false,
