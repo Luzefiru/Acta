@@ -2,7 +2,9 @@
 import './App.css';
 /* library imports */
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 /* JSX component imports */
 import Navbar from './components/layouts/Navbar.jsx';
 import Footer from './components/layouts/Footer.jsx';
@@ -30,6 +32,33 @@ function App() {
     }
   });
 
+  useEffect(() => {
+    if (user !== null) {
+      toast.success('Signed in successfully', {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+        toastId: 'signin',
+      });
+    } else {
+      toast.error('You are now signed out', {
+        position: 'bottom-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+    }
+  }, [user]);
+
   return (
     <div className="App">
       <HashRouter>
@@ -50,6 +79,18 @@ function App() {
         </div>
         <Footer />
       </HashRouter>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }
