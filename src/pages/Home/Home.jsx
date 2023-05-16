@@ -2,6 +2,7 @@ import './Home.css';
 import HeroIllustration from '../../assets/hero-illustration.svg';
 import ContainedButton from '../../components/ui/ContainedButton';
 import { Link } from 'react-router-dom';
+import Newsletter from './Newsletter.jsx';
 
 function Home() {
   return (
@@ -24,6 +25,7 @@ function Home() {
           </Link>
         </div>
       </main>
+      <Newsletter />
     </div>
   );
 }
